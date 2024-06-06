@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3D6AFAE92C11235000AFFDB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFAE82C11235000AFFDB1 /* AppDelegate.swift */; };
 		3D6AFAEB2C11235000AFFDB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFAEA2C11235000AFFDB1 /* SceneDelegate.swift */; };
-		3D6AFAED2C11235000AFFDB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFAEC2C11235000AFFDB1 /* ViewController.swift */; };
 		3D6AFAF02C11235000AFFDB1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 3D6AFAEF2C11235000AFFDB1 /* Base */; };
 		3D6AFAF32C11235000AFFDB1 /* Dictionary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFAF12C11235000AFFDB1 /* Dictionary.xcdatamodeld */; };
 		3D6AFAF52C11235100AFFDB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D6AFAF42C11235100AFFDB1 /* Assets.xcassets */; };
@@ -17,6 +16,22 @@
 		3D6AFB032C11235100AFFDB1 /* DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFB022C11235100AFFDB1 /* DictionaryTests.swift */; };
 		3D6AFB0D2C11235100AFFDB1 /* DictionaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFB0C2C11235100AFFDB1 /* DictionaryUITests.swift */; };
 		3D6AFB0F2C11235100AFFDB1 /* DictionaryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFB0E2C11235100AFFDB1 /* DictionaryUITestsLaunchTests.swift */; };
+		3D6AFB202C1126C600AFFDB1 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFB1F2C1126C600AFFDB1 /* API.swift */; };
+		3D6AFB222C1126D900AFFDB1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFB212C1126D900AFFDB1 /* NetworkManager.swift */; };
+		3D6AFB242C1126F500AFFDB1 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFB232C1126F500AFFDB1 /* Reachability.swift */; };
+		3D6AFB272C112B6B00AFFDB1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFB262C112B6B00AFFDB1 /* BaseViewController.swift */; };
+		3D6AFB312C112D0600AFFDB1 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFB2F2C112D0600AFFDB1 /* SplashViewController.swift */; };
+		3D6AFB322C112D0600AFFDB1 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D6AFB302C112D0600AFFDB1 /* SplashViewController.xib */; };
+		3D6AFB342C112D7D00AFFDB1 /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFB332C112D7D00AFFDB1 /* SplashInteractor.swift */; };
+		3D6AFB362C112D9000AFFDB1 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFB352C112D9000AFFDB1 /* SplashPresenter.swift */; };
+		3D6AFB382C112DA500AFFDB1 /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFB372C112DA500AFFDB1 /* SplashRouter.swift */; };
+		3D6AFB3C2C1137B500AFFDB1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFB3A2C1137B500AFFDB1 /* HomeViewController.swift */; };
+		3D6AFB3D2C1137B500AFFDB1 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D6AFB3B2C1137B500AFFDB1 /* HomeViewController.xib */; };
+		3D6AFB3F2C11383500AFFDB1 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFB3E2C11383500AFFDB1 /* HomeInteractor.swift */; };
+		3D6AFB412C11384800AFFDB1 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFB402C11384800AFFDB1 /* HomePresenter.swift */; };
+		3D6AFB432C11385200AFFDB1 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFB422C11385200AFFDB1 /* HomeRouter.swift */; };
+		3D6AFB462C11426300AFFDB1 /* WordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFB452C11426300AFFDB1 /* WordResponse.swift */; };
+		3D6AFB482C1142CC00AFFDB1 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFB472C1142CC00AFFDB1 /* ServiceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +55,6 @@
 		3D6AFAE52C11235000AFFDB1 /* Dictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D6AFAE82C11235000AFFDB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D6AFAEA2C11235000AFFDB1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3D6AFAEC2C11235000AFFDB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3D6AFAEF2C11235000AFFDB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D6AFAF22C11235000AFFDB1 /* Dictionary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dictionary.xcdatamodel; sourceTree = "<group>"; };
 		3D6AFAF42C11235100AFFDB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +65,22 @@
 		3D6AFB082C11235100AFFDB1 /* DictionaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DictionaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D6AFB0C2C11235100AFFDB1 /* DictionaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryUITests.swift; sourceTree = "<group>"; };
 		3D6AFB0E2C11235100AFFDB1 /* DictionaryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3D6AFB1F2C1126C600AFFDB1 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		3D6AFB212C1126D900AFFDB1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		3D6AFB232C1126F500AFFDB1 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		3D6AFB262C112B6B00AFFDB1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		3D6AFB2F2C112D0600AFFDB1 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		3D6AFB302C112D0600AFFDB1 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		3D6AFB332C112D7D00AFFDB1 /* SplashInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractor.swift; sourceTree = "<group>"; };
+		3D6AFB352C112D9000AFFDB1 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
+		3D6AFB372C112DA500AFFDB1 /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
+		3D6AFB3A2C1137B500AFFDB1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3D6AFB3B2C1137B500AFFDB1 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		3D6AFB3E2C11383500AFFDB1 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		3D6AFB402C11384800AFFDB1 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		3D6AFB422C11385200AFFDB1 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		3D6AFB452C11426300AFFDB1 /* WordResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordResponse.swift; sourceTree = "<group>"; };
+		3D6AFB472C1142CC00AFFDB1 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +131,11 @@
 		3D6AFAE72C11235000AFFDB1 /* Dictionary */ = {
 			isa = PBXGroup;
 			children = (
-				3D6AFAE82C11235000AFFDB1 /* AppDelegate.swift */,
-				3D6AFAEA2C11235000AFFDB1 /* SceneDelegate.swift */,
-				3D6AFAEC2C11235000AFFDB1 /* ViewController.swift */,
-				3D6AFAEE2C11235000AFFDB1 /* Main.storyboard */,
-				3D6AFAF42C11235100AFFDB1 /* Assets.xcassets */,
-				3D6AFAF62C11235100AFFDB1 /* LaunchScreen.storyboard */,
+				3D6AFB1B2C11249500AFFDB1 /* App */,
+				3D6AFB1E2C11256700AFFDB1 /* Network */,
+				3D6AFB1D2C11255E00AFFDB1 /* Module */,
+				3D6AFB1C2C1124ED00AFFDB1 /* Resources */,
 				3D6AFAF92C11235100AFFDB1 /* Info.plist */,
-				3D6AFAF12C11235000AFFDB1 /* Dictionary.xcdatamodeld */,
 			);
 			path = Dictionary;
 			sourceTree = "<group>";
@@ -128,6 +155,88 @@
 				3D6AFB0E2C11235100AFFDB1 /* DictionaryUITestsLaunchTests.swift */,
 			);
 			path = DictionaryUITests;
+			sourceTree = "<group>";
+		};
+		3D6AFB1B2C11249500AFFDB1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3D6AFAE82C11235000AFFDB1 /* AppDelegate.swift */,
+				3D6AFAEA2C11235000AFFDB1 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3D6AFB1C2C1124ED00AFFDB1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3D6AFAF42C11235100AFFDB1 /* Assets.xcassets */,
+				3D6AFAEE2C11235000AFFDB1 /* Main.storyboard */,
+				3D6AFAF62C11235100AFFDB1 /* LaunchScreen.storyboard */,
+				3D6AFAF12C11235000AFFDB1 /* Dictionary.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3D6AFB1D2C11255E00AFFDB1 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				3D6AFB442C1141F700AFFDB1 /* Entity */,
+				3D6AFB392C11379D00AFFDB1 /* Home */,
+				3D6AFB2E2C112CCC00AFFDB1 /* Splash */,
+				3D6AFB252C112B3500AFFDB1 /* Base */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		3D6AFB1E2C11256700AFFDB1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3D6AFB232C1126F500AFFDB1 /* Reachability.swift */,
+				3D6AFB472C1142CC00AFFDB1 /* ServiceManager.swift */,
+				3D6AFB212C1126D900AFFDB1 /* NetworkManager.swift */,
+				3D6AFB1F2C1126C600AFFDB1 /* API.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3D6AFB252C112B3500AFFDB1 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3D6AFB262C112B6B00AFFDB1 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		3D6AFB2E2C112CCC00AFFDB1 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				3D6AFB2F2C112D0600AFFDB1 /* SplashViewController.swift */,
+				3D6AFB302C112D0600AFFDB1 /* SplashViewController.xib */,
+				3D6AFB332C112D7D00AFFDB1 /* SplashInteractor.swift */,
+				3D6AFB352C112D9000AFFDB1 /* SplashPresenter.swift */,
+				3D6AFB372C112DA500AFFDB1 /* SplashRouter.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		3D6AFB392C11379D00AFFDB1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3D6AFB3A2C1137B500AFFDB1 /* HomeViewController.swift */,
+				3D6AFB3B2C1137B500AFFDB1 /* HomeViewController.xib */,
+				3D6AFB3E2C11383500AFFDB1 /* HomeInteractor.swift */,
+				3D6AFB402C11384800AFFDB1 /* HomePresenter.swift */,
+				3D6AFB422C11385200AFFDB1 /* HomeRouter.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3D6AFB442C1141F700AFFDB1 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				3D6AFB452C11426300AFFDB1 /* WordResponse.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +345,9 @@
 			files = (
 				3D6AFAF52C11235100AFFDB1 /* Assets.xcassets in Resources */,
 				3D6AFAF82C11235100AFFDB1 /* Base in Resources */,
+				3D6AFB3D2C1137B500AFFDB1 /* HomeViewController.xib in Resources */,
 				3D6AFAF02C11235000AFFDB1 /* Base in Resources */,
+				3D6AFB322C112D0600AFFDB1 /* SplashViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +372,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D6AFAED2C11235000AFFDB1 /* ViewController.swift in Sources */,
+				3D6AFB242C1126F500AFFDB1 /* Reachability.swift in Sources */,
+				3D6AFB462C11426300AFFDB1 /* WordResponse.swift in Sources */,
+				3D6AFB222C1126D900AFFDB1 /* NetworkManager.swift in Sources */,
+				3D6AFB3F2C11383500AFFDB1 /* HomeInteractor.swift in Sources */,
 				3D6AFAF32C11235000AFFDB1 /* Dictionary.xcdatamodeld in Sources */,
+				3D6AFB3C2C1137B500AFFDB1 /* HomeViewController.swift in Sources */,
+				3D6AFB432C11385200AFFDB1 /* HomeRouter.swift in Sources */,
 				3D6AFAE92C11235000AFFDB1 /* AppDelegate.swift in Sources */,
+				3D6AFB272C112B6B00AFFDB1 /* BaseViewController.swift in Sources */,
+				3D6AFB342C112D7D00AFFDB1 /* SplashInteractor.swift in Sources */,
 				3D6AFAEB2C11235000AFFDB1 /* SceneDelegate.swift in Sources */,
+				3D6AFB412C11384800AFFDB1 /* HomePresenter.swift in Sources */,
+				3D6AFB482C1142CC00AFFDB1 /* ServiceManager.swift in Sources */,
+				3D6AFB382C112DA500AFFDB1 /* SplashRouter.swift in Sources */,
+				3D6AFB202C1126C600AFFDB1 /* API.swift in Sources */,
+				3D6AFB312C112D0600AFFDB1 /* SplashViewController.swift in Sources */,
+				3D6AFB362C112D9000AFFDB1 /* SplashPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
