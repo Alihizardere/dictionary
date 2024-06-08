@@ -8,13 +8,22 @@
 import Foundation
 
 protocol HomePresenterProtocol {
-  func didSelectWord(word: String)
+  func viewDidLoad()
+  func viewWillAppear()
+  func wordSearched(word: String)
+  func fetchSavedWords()
+  func numberOfItems() -> Int
+  func didSelectRowAt(_ indexPath: IndexPath)
+  func word(indexPath: IndexPath) -> String?
+  func deleteWord(at indexPath: IndexPath)
 }
 
 final class HomePresenter {
   weak var view: HomeViewControllerProtocol!
   let router: HomeRouterProtocol
   let interactor: HomeInteractorProtocol
+
+  private var words = [String]()
 
   init(
     view: HomeViewControllerProtocol!,
@@ -28,8 +37,44 @@ final class HomePresenter {
 }
 
 extension HomePresenter: HomePresenterProtocol {
-  func didSelectWord(word: String) {
+
+  func viewDidLoad() {
+    view.setupDelegates()
+  }
+
+  func viewWillAppear() {
+    fetchSavedWords()
+    view.reloadData()
+  }
+
+  func wordSearched(word: String) {
     fethWord(word: word)
+  }
+
+  func fetchSavedWords() {
+    interactor.fetchSavedWords()
+  }
+
+  func numberOfItems() -> Int {
+    if words.count <= 5 {
+     return  words.count
+    }
+    return 5
+  }
+
+  func didSelectRowAt(_ indexPath: IndexPath) {
+    let word = words[indexPath.row]
+    fethWord(word: word)
+  }
+
+  func word(indexPath: IndexPath) -> String? {
+    words[indexPath.row]
+  }
+
+  func deleteWord(at indexPath: IndexPath) {
+    interactor.deleteWord(indexPath: indexPath)
+    words.remove(at: indexPath.row)
+    view.reloadData()
   }
 
   private func fethWord(word: String) {
@@ -38,6 +83,7 @@ extension HomePresenter: HomePresenterProtocol {
 }
 
 extension HomePresenter: HomeInteractorOutputProtocol {
+  
   func fetchWordOutput(result: WordSourceResult) {
     switch result {
     case .success(let word):
@@ -46,6 +92,12 @@ extension HomePresenter: HomeInteractorOutputProtocol {
       }
     case .failure(let error):
       print(error.localizedDescription)
+    }
+  }
+
+  func fetchSavedWordsOutput(words: [String]) {
+    DispatchQueue.main.async {
+      self.words = words
     }
   }
 }

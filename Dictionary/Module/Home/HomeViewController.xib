@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="searchBar" destination="5YR-0N-wt6" id="del-eY-uIW"/>
                 <outlet property="searchButton" destination="hQk-Fc-moh" id="l1K-48-Zmb"/>
+                <outlet property="tableView" destination="eGT-b9-jL0" id="K64-ZV-thY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -40,15 +41,31 @@
                         <action selector="searchButtonTapped:" destination="-1" eventType="touchUpInside" id="9bo-mR-TZ4"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmL-9r-meJ">
+                    <rect key="frame" x="16" y="116.99999999999999" width="136.66666666666666" height="26.333333333333329"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                    <color key="textColor" systemColor="systemOrangeColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eGT-b9-jL0">
+                    <rect key="frame" x="16" y="151.33333333333334" width="361" height="272.66666666666663"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="5YR-0N-wt6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="8Dk-ta-EAm"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hQk-Fc-moh" secondAttribute="trailing" constant="16" id="Bbx-3e-h4c"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eGT-b9-jL0" secondAttribute="trailing" constant="16" id="DqW-UO-rOl"/>
+                <constraint firstItem="rmL-9r-meJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="JYz-jh-dzs"/>
                 <constraint firstItem="5YR-0N-wt6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Pop-cc-fur"/>
+                <constraint firstItem="eGT-b9-jL0" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.32" id="PwS-ax-3ij"/>
                 <constraint firstItem="hQk-Fc-moh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Se1-Vf-CBf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hQk-Fc-moh" secondAttribute="bottom" constant="8" id="UEL-y6-Smp"/>
+                <constraint firstItem="eGT-b9-jL0" firstAttribute="top" secondItem="rmL-9r-meJ" secondAttribute="bottom" constant="8" id="eqt-ny-9tc"/>
+                <constraint firstItem="rmL-9r-meJ" firstAttribute="top" secondItem="5YR-0N-wt6" secondAttribute="bottom" constant="8" id="mmb-DR-Ig7"/>
+                <constraint firstItem="eGT-b9-jL0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="oOT-tl-fu3"/>
                 <constraint firstItem="hQk-Fc-moh" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.06" id="qAv-zV-QO4"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5YR-0N-wt6" secondAttribute="trailing" id="tla-qh-IKQ"/>
             </constraints>
@@ -88,7 +105,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

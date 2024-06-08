@@ -35,6 +35,10 @@
 		3DC476F42C120D5B005DACA8 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DC476F32C120D5B005DACA8 /* SecondViewController.xib */; };
 		3DC476F52C120D5B005DACA8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC476F22C120D5B005DACA8 /* SecondViewController.swift */; };
 		3DC476FB2C120FD4005DACA8 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC476FA2C120FD4005DACA8 /* CustomTabBar.swift */; };
+		3DE12FB42C145A2600FF2926 /* RecentSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE12FB22C145A2600FF2926 /* RecentSearchCell.swift */; };
+		3DE12FB52C145A2600FF2926 /* RecentSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DE12FB32C145A2600FF2926 /* RecentSearchCell.xib */; };
+		3DE12FB72C145C9600FF2926 /* WordRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE12FB62C145C9600FF2926 /* WordRepository.swift */; };
+		3DE12FBC2C14AC5F00FF2926 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE12FBB2C14AC5F00FF2926 /* UITableView.swift */; };
 		3DF099F12C13AC0D00044B20 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF099EF2C13AC0D00044B20 /* DetailViewController.swift */; };
 		3DF099F22C13AC0D00044B20 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DF099F02C13AC0D00044B20 /* DetailViewController.xib */; };
 		3DF099F42C13AD6300044B20 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF099F32C13AD6300044B20 /* DetailInteractor.swift */; };
@@ -92,6 +96,10 @@
 		3DC476F22C120D5B005DACA8 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		3DC476F32C120D5B005DACA8 /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 		3DC476FA2C120FD4005DACA8 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		3DE12FB22C145A2600FF2926 /* RecentSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchCell.swift; sourceTree = "<group>"; };
+		3DE12FB32C145A2600FF2926 /* RecentSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentSearchCell.xib; sourceTree = "<group>"; };
+		3DE12FB62C145C9600FF2926 /* WordRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordRepository.swift; sourceTree = "<group>"; };
+		3DE12FBB2C14AC5F00FF2926 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		3DF099EF2C13AC0D00044B20 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3DF099F02C13AC0D00044B20 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		3DF099F32C13AD6300044B20 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
@@ -187,6 +195,7 @@
 		3D6AFB1C2C1124ED00AFFDB1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3DE12FB82C14983B00FF2926 /* Extensions */,
 				3DC476EF2C120CC5005DACA8 /* View */,
 				3D6AFAF42C11235100AFFDB1 /* Assets.xcassets */,
 				3D6AFAEE2C11235000AFFDB1 /* Main.storyboard */,
@@ -215,6 +224,7 @@
 				3D6AFB472C1142CC00AFFDB1 /* ServiceManager.swift */,
 				3D6AFB212C1126D900AFFDB1 /* NetworkManager.swift */,
 				3D6AFB1F2C1126C600AFFDB1 /* API.swift */,
+				3DE12FB62C145C9600FF2926 /* WordRepository.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -242,6 +252,7 @@
 		3D6AFB392C11379D00AFFDB1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3DE12FB12C1459EA00FF2926 /* Cell */,
 				3D6AFB3A2C1137B500AFFDB1 /* HomeViewController.swift */,
 				3D6AFB3B2C1137B500AFFDB1 /* HomeViewController.xib */,
 				3D6AFB3E2C11383500AFFDB1 /* HomeInteractor.swift */,
@@ -265,6 +276,23 @@
 				3DC476FA2C120FD4005DACA8 /* CustomTabBar.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3DE12FB12C1459EA00FF2926 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3DE12FB22C145A2600FF2926 /* RecentSearchCell.swift */,
+				3DE12FB32C145A2600FF2926 /* RecentSearchCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		3DE12FB82C14983B00FF2926 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3DE12FBB2C14AC5F00FF2926 /* UITableView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		3DF099EE2C13ABDB00044B20 /* Detail */ = {
@@ -387,6 +415,7 @@
 				3D6AFAF82C11235100AFFDB1 /* Base in Resources */,
 				3DF099F22C13AC0D00044B20 /* DetailViewController.xib in Resources */,
 				3DC476F42C120D5B005DACA8 /* SecondViewController.xib in Resources */,
+				3DE12FB52C145A2600FF2926 /* RecentSearchCell.xib in Resources */,
 				3D6AFB3D2C1137B500AFFDB1 /* HomeViewController.xib in Resources */,
 				3D6AFAF02C11235000AFFDB1 /* Base in Resources */,
 				3D6AFB322C112D0600AFFDB1 /* SplashViewController.xib in Resources */,
@@ -416,8 +445,10 @@
 			files = (
 				3D6AFB242C1126F500AFFDB1 /* Reachability.swift in Sources */,
 				3D6AFB462C11426300AFFDB1 /* WordResponse.swift in Sources */,
+				3DE12FB72C145C9600FF2926 /* WordRepository.swift in Sources */,
 				3DC476FB2C120FD4005DACA8 /* CustomTabBar.swift in Sources */,
 				3D6AFB222C1126D900AFFDB1 /* NetworkManager.swift in Sources */,
+				3DE12FBC2C14AC5F00FF2926 /* UITableView.swift in Sources */,
 				3DC476F52C120D5B005DACA8 /* SecondViewController.swift in Sources */,
 				3D6AFB3F2C11383500AFFDB1 /* HomeInteractor.swift in Sources */,
 				3D6AFAF32C11235000AFFDB1 /* Dictionary.xcdatamodeld in Sources */,
@@ -430,6 +461,7 @@
 				3DF099F82C13AD8500044B20 /* DetailRouter.swift in Sources */,
 				3D6AFAEB2C11235000AFFDB1 /* SceneDelegate.swift in Sources */,
 				3D6AFB412C11384800AFFDB1 /* HomePresenter.swift in Sources */,
+				3DE12FB42C145A2600FF2926 /* RecentSearchCell.swift in Sources */,
 				3DF099F62C13AD7A00044B20 /* DetailPresenter.swift in Sources */,
 				3D6AFB482C1142CC00AFFDB1 /* ServiceManager.swift in Sources */,
 				3D6AFB382C112DA500AFFDB1 /* SplashRouter.swift in Sources */,
