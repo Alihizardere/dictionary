@@ -8,7 +8,7 @@
 import Foundation
 
 protocol HomePresenterProtocol {
-
+  func didSelectWord(word: String)
 }
 
 final class HomePresenter {
@@ -28,9 +28,24 @@ final class HomePresenter {
 }
 
 extension HomePresenter: HomePresenterProtocol {
-  
+  func didSelectWord(word: String) {
+    fethWord(word: word)
+  }
+
+  private func fethWord(word: String) {
+    interactor.fetchWord(word: word)
+  }
 }
 
 extension HomePresenter: HomeInteractorOutputProtocol {
-  
+  func fetchWordOutput(result: WordSourceResult) {
+    switch result {
+    case .success(let word):
+      DispatchQueue.main.async {
+        self.router.navigate(.detail(word: word))
+      }
+    case .failure(let error):
+      print(error.localizedDescription)
+    }
+  }
 }

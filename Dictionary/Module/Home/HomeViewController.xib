@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Dictionary" customModuleProvider="target">
             <connections>
+                <outlet property="searchBar" destination="5YR-0N-wt6" id="del-eY-uIW"/>
+                <outlet property="searchButton" destination="hQk-Fc-moh" id="l1K-48-Zmb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,20 +30,65 @@
                         <outlet property="delegate" destination="-1" id="XwF-41-eIk"/>
                     </connections>
                 </searchBar>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQk-Fc-moh">
+                    <rect key="frame" x="16" y="759" width="361" height="51"/>
+                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Search"/>
+                    <connections>
+                        <action selector="searchButtonTapped:" destination="-1" eventType="touchUpInside" id="9bo-mR-TZ4"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="5YR-0N-wt6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="8Dk-ta-EAm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hQk-Fc-moh" secondAttribute="trailing" constant="16" id="Bbx-3e-h4c"/>
                 <constraint firstItem="5YR-0N-wt6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Pop-cc-fur"/>
+                <constraint firstItem="hQk-Fc-moh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Se1-Vf-CBf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hQk-Fc-moh" secondAttribute="bottom" constant="8" id="UEL-y6-Smp"/>
+                <constraint firstItem="hQk-Fc-moh" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.06" id="qAv-zV-QO4"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5YR-0N-wt6" secondAttribute="trailing" id="tla-qh-IKQ"/>
             </constraints>
-            <point key="canvasLocation" x="-22" y="-11"/>
+            <point key="canvasLocation" x="-22.137404580152669" y="-11.267605633802818"/>
         </view>
+        <tabBarController id="SXr-uK-Qwf">
+            <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tel-dk-h7L">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            </tabBar>
+            <viewControllers>
+                <viewController id="1s0-UJ-QKP">
+                    <view key="view" contentMode="scaleToFill" id="pQ5-Ls-Jcp">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Lpy-4A-FWp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="3H7-iK-mnO"/>
+                </viewController>
+                <viewController id="BMx-yz-v0u">
+                    <view key="view" contentMode="scaleToFill" id="Uh9-Tt-bsh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ZvZ-Yx-ipl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="T5V-TT-ns5"/>
+                </viewController>
+            </viewControllers>
+            <point key="canvasLocation" x="-779" y="-11"/>
+        </tabBarController>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
