@@ -48,7 +48,7 @@ extension HomePresenter: HomePresenterProtocol {
   }
 
   func wordSearched(word: String) {
-    fethWord(word: word)
+    fetch(word: word)
   }
 
   func fetchSavedWords() {
@@ -64,7 +64,7 @@ extension HomePresenter: HomePresenterProtocol {
 
   func didSelectRowAt(_ indexPath: IndexPath) {
     let word = words[indexPath.row]
-    fethWord(word: word)
+    fetch(word: word)
   }
 
   func word(indexPath: IndexPath) -> String? {
@@ -77,7 +77,7 @@ extension HomePresenter: HomePresenterProtocol {
     view.reloadData()
   }
 
-  private func fethWord(word: String) {
+  private func fetch(word: String) {
     interactor.fetchWord(word: word)
   }
 }
