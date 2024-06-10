@@ -32,6 +32,8 @@
 		3D6AFB432C11385200AFFDB1 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFB422C11385200AFFDB1 /* HomeRouter.swift */; };
 		3D6AFB462C11426300AFFDB1 /* WordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFB452C11426300AFFDB1 /* WordResponse.swift */; };
 		3D6AFB482C1142CC00AFFDB1 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFB472C1142CC00AFFDB1 /* ServiceManager.swift */; };
+		3DA2F8CA2C15EC29000A8437 /* WordTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DA2F8C92C15EC29000A8437 /* WordTypeCell.xib */; };
+		3DA2F8CB2C15EC29000A8437 /* WordTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA2F8C82C15EC29000A8437 /* WordTypeCell.swift */; };
 		3DC476F42C120D5B005DACA8 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DC476F32C120D5B005DACA8 /* SecondViewController.xib */; };
 		3DC476F52C120D5B005DACA8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC476F22C120D5B005DACA8 /* SecondViewController.swift */; };
 		3DC476FB2C120FD4005DACA8 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC476FA2C120FD4005DACA8 /* CustomTabBar.swift */; };
@@ -39,6 +41,9 @@
 		3DE12FB52C145A2600FF2926 /* RecentSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DE12FB32C145A2600FF2926 /* RecentSearchCell.xib */; };
 		3DE12FB72C145C9600FF2926 /* WordRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE12FB62C145C9600FF2926 /* WordRepository.swift */; };
 		3DE12FBC2C14AC5F00FF2926 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE12FBB2C14AC5F00FF2926 /* UITableView.swift */; };
+		3DECF8F12C16591200A97462 /* SynonymCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DECF8F02C16591200A97462 /* SynonymCell.xib */; };
+		3DECF8F22C16591200A97462 /* SynonymCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DECF8EF2C16591200A97462 /* SynonymCell.swift */; };
+		3DECF8F42C16646F00A97462 /* Synonym.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DECF8F32C16646F00A97462 /* Synonym.swift */; };
 		3DF099F12C13AC0D00044B20 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF099EF2C13AC0D00044B20 /* DetailViewController.swift */; };
 		3DF099F22C13AC0D00044B20 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DF099F02C13AC0D00044B20 /* DetailViewController.xib */; };
 		3DF099F42C13AD6300044B20 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF099F32C13AD6300044B20 /* DetailInteractor.swift */; };
@@ -93,6 +98,8 @@
 		3D6AFB422C11385200AFFDB1 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		3D6AFB452C11426300AFFDB1 /* WordResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordResponse.swift; sourceTree = "<group>"; };
 		3D6AFB472C1142CC00AFFDB1 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		3DA2F8C82C15EC29000A8437 /* WordTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTypeCell.swift; sourceTree = "<group>"; };
+		3DA2F8C92C15EC29000A8437 /* WordTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordTypeCell.xib; sourceTree = "<group>"; };
 		3DC476F22C120D5B005DACA8 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		3DC476F32C120D5B005DACA8 /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 		3DC476FA2C120FD4005DACA8 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
@@ -100,6 +107,9 @@
 		3DE12FB32C145A2600FF2926 /* RecentSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentSearchCell.xib; sourceTree = "<group>"; };
 		3DE12FB62C145C9600FF2926 /* WordRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordRepository.swift; sourceTree = "<group>"; };
 		3DE12FBB2C14AC5F00FF2926 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		3DECF8EF2C16591200A97462 /* SynonymCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynonymCell.swift; sourceTree = "<group>"; };
+		3DECF8F02C16591200A97462 /* SynonymCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SynonymCell.xib; sourceTree = "<group>"; };
+		3DECF8F32C16646F00A97462 /* Synonym.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Synonym.swift; sourceTree = "<group>"; };
 		3DF099EF2C13AC0D00044B20 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3DF099F02C13AC0D00044B20 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		3DF099F32C13AD6300044B20 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
@@ -266,8 +276,18 @@
 			isa = PBXGroup;
 			children = (
 				3D6AFB452C11426300AFFDB1 /* WordResponse.swift */,
+				3DECF8F32C16646F00A97462 /* Synonym.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		3DA2F8C72C15EC00000A8437 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3DECF8ED2C1658D500A97462 /* WordTypeCell */,
+				3DECF8EE2C1658E400A97462 /* SynonymCell */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		3DC476EF2C120CC5005DACA8 /* View */ = {
@@ -295,9 +315,28 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		3DECF8ED2C1658D500A97462 /* WordTypeCell */ = {
+			isa = PBXGroup;
+			children = (
+				3DA2F8C82C15EC29000A8437 /* WordTypeCell.swift */,
+				3DA2F8C92C15EC29000A8437 /* WordTypeCell.xib */,
+			);
+			path = WordTypeCell;
+			sourceTree = "<group>";
+		};
+		3DECF8EE2C1658E400A97462 /* SynonymCell */ = {
+			isa = PBXGroup;
+			children = (
+				3DECF8EF2C16591200A97462 /* SynonymCell.swift */,
+				3DECF8F02C16591200A97462 /* SynonymCell.xib */,
+			);
+			path = SynonymCell;
+			sourceTree = "<group>";
+		};
 		3DF099EE2C13ABDB00044B20 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				3DA2F8C72C15EC00000A8437 /* Cell */,
 				3DF099EF2C13AC0D00044B20 /* DetailViewController.swift */,
 				3DF099F02C13AC0D00044B20 /* DetailViewController.xib */,
 				3DF099F32C13AD6300044B20 /* DetailInteractor.swift */,
@@ -411,10 +450,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DA2F8CA2C15EC29000A8437 /* WordTypeCell.xib in Resources */,
 				3D6AFAF52C11235100AFFDB1 /* Assets.xcassets in Resources */,
 				3D6AFAF82C11235100AFFDB1 /* Base in Resources */,
 				3DF099F22C13AC0D00044B20 /* DetailViewController.xib in Resources */,
 				3DC476F42C120D5B005DACA8 /* SecondViewController.xib in Resources */,
+				3DECF8F12C16591200A97462 /* SynonymCell.xib in Resources */,
 				3DE12FB52C145A2600FF2926 /* RecentSearchCell.xib in Resources */,
 				3D6AFB3D2C1137B500AFFDB1 /* HomeViewController.xib in Resources */,
 				3D6AFAF02C11235000AFFDB1 /* Base in Resources */,
@@ -452,9 +493,11 @@
 				3DC476F52C120D5B005DACA8 /* SecondViewController.swift in Sources */,
 				3D6AFB3F2C11383500AFFDB1 /* HomeInteractor.swift in Sources */,
 				3D6AFAF32C11235000AFFDB1 /* Dictionary.xcdatamodeld in Sources */,
+				3DA2F8CB2C15EC29000A8437 /* WordTypeCell.swift in Sources */,
 				3DF099F12C13AC0D00044B20 /* DetailViewController.swift in Sources */,
 				3D6AFB3C2C1137B500AFFDB1 /* HomeViewController.swift in Sources */,
 				3D6AFB432C11385200AFFDB1 /* HomeRouter.swift in Sources */,
+				3DECF8F22C16591200A97462 /* SynonymCell.swift in Sources */,
 				3D6AFAE92C11235000AFFDB1 /* AppDelegate.swift in Sources */,
 				3D6AFB272C112B6B00AFFDB1 /* BaseViewController.swift in Sources */,
 				3D6AFB342C112D7D00AFFDB1 /* SplashInteractor.swift in Sources */,
@@ -466,6 +509,7 @@
 				3D6AFB482C1142CC00AFFDB1 /* ServiceManager.swift in Sources */,
 				3D6AFB382C112DA500AFFDB1 /* SplashRouter.swift in Sources */,
 				3D6AFB202C1126C600AFFDB1 /* API.swift in Sources */,
+				3DECF8F42C16646F00A97462 /* Synonym.swift in Sources */,
 				3DF099F42C13AD6300044B20 /* DetailInteractor.swift in Sources */,
 				3D6AFB312C112D0600AFFDB1 /* SplashViewController.swift in Sources */,
 				3D6AFB362C112D9000AFFDB1 /* SplashPresenter.swift in Sources */,

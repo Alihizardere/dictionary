@@ -19,7 +19,8 @@ final class API {
     return instance
   }()
 
-  var baseURL = "https://api.dictionaryapi.dev/api/v2/entries/en/"
+  var wordURL = "https://api.dictionaryapi.dev/api/v2/entries/en/"
+  var synonymURL = "https://api.datamuse.com/words?rel_syn="
 
   private var service: NetworkService
 
@@ -38,7 +39,8 @@ extension API {
     word: String,
     parameters: [String: Any]? = nil,
     headers: [String: String]? = nil,
-    method: RequestMethod = .get
+    method: RequestMethod = .get,
+    baseURL: String
   ) -> URLRequest? {
 
     let urlString = baseURL + word
@@ -80,13 +82,15 @@ extension API {
     parameters: [String: Any]? = nil,
     headers: [String: String]? = nil,
     method: RequestMethod = .get,
+    baseURL: String,
     completion: @escaping (Result<T, NetworkError>) -> Void
   ) {
     if let urlRequest = prepareURLRequestFor(
       word: word,
       parameters: parameters,
       headers: headers,
-      method: method
+      method: method,
+      baseURL: baseURL
     ) {
       service.execute(urlRequest: urlRequest, completion: completion)
     } else {

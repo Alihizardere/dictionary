@@ -13,6 +13,9 @@ protocol DetailViewControllerProtocol: AnyObject {
   func hideButton(for section: String)
   func showButton(for section: String)
   func resetButtonVisibility()
+  func setupTableView()
+  func reloadData()
+  func configureData(result: [WordResponse])
 }
 
 final class DetailViewController: UIViewController {
@@ -25,16 +28,20 @@ final class DetailViewController: UIViewController {
   @IBOutlet weak var verbButton: UIButton!
   @IBOutlet weak var adjectiveButton: UIButton!
   @IBOutlet weak var cancelButton: UIButton!
+  @IBOutlet weak var tableView: UITableView!
   var presenter: DetailPresenterProtocol!
-  var selectedWord: [WordResponse]?
+  var selectedWord: [WordResponse]? {
+    didSet {
+      if let word = selectedWord {
+        presenter.setWordResults(result: word)
+      }
+    }
+  }
 
   // MARK: - Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    if let word = selectedWord {
-      titleLabel.text = word.first?.word
-      secondaryTitle.text = word.first?.phonetic
-    }
+    presenter.viewDidLoad()
   }
   
 // MARK: - Actions && Functions
@@ -52,19 +59,36 @@ final class DetailViewController: UIViewController {
 
   @IBAction func cancelButtonTapped(_ sender: Any) {
     presenter.cancelButtonTapped()
+    cancelButton.isHidden = true
     selectedSectionButton.isHidden = true
-    // TODO - tableview reload
   }
 
   private func toggleSection(section: String, button: UIButton) {
     presenter.toggleSection(section: section)
-    // TODO - tableview reload
   }
 }
 
 // MARK: - DetailViewControllerProtocol
 extension DetailViewController: DetailViewControllerProtocol {
+
+  func setupTableView() {
+    tableView.delegate = self
+    tableView.dataSource = self
+    tableView.register(UINib(nibName: WordTypeCell.identifier, bundle: nil), forCellReuseIdentifier: WordTypeCell.identifier)
+    tableView.register(UINib(nibName: SynonymCell.identifier, bundle: nil), forCellReuseIdentifier: SynonymCell.identifier)
+  }
   
+  func reloadData() {
+    DispatchQueue.main.async {
+      self.tableView.reloadData()
+    }
+  }
+
+  func configureData(result: [WordResponse]) {
+    titleLabel.text = result.first?.word
+    secondaryTitle.text = result.first?.phonetic
+  }
+
   func setupSectionButtonDisplay() {
     cancelButton.isHidden = false
     selectedSectionButton.layer.borderWidth = 2
@@ -106,6 +130,42 @@ extension DetailViewController: DetailViewControllerProtocol {
       adjectiveButton.isHidden = false
     default:
       break
+    }
+  }
+}
+
+// MARK: - SynonymCellDelegate
+extension DetailViewController: SynonymCellDelegate {
+  func synonymButtonTapped(_ synonym: String) {
+    presenter.fetchSynonymDetail(word: synonym)
+  }
+}
+
+// MARK: - UITableViewDelegate, UITableViewDataSource
+extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
+
+  func numberOfSections(in tableView: UITableView) -> Int {
+    presenter.numberOfSections()
+  }
+
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    presenter.numberOfRowsInSection(section: section)
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+    if indexPath.section == presenter.numberOfSections() - 1 {
+      let cell = tableView.dequeueReusableCell(withIdentifier: SynonymCell.identifier , for: indexPath) as! SynonymCell
+      let synonyms = presenter.getSynonyms()
+      cell.delegate = self
+      cell.setupSynonymCell(synonyms: synonyms)
+      return cell
+    } else {
+      let cell = tableView.dequeueReusableCell(withIdentifier: WordTypeCell.identifier, for: indexPath) as! WordTypeCell
+      if let data = presenter.wordTypeData(indexPath: indexPath) {
+        cell.configure(sectionKey: data.sectionKey, definition: data.definition)
+      }
+      return cell
     }
   }
 }
