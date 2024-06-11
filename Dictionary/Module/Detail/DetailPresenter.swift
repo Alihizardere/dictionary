@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AVFoundation
 
 protocol DetailPresenterProtocol {
   func viewDidLoad()
@@ -18,6 +19,8 @@ protocol DetailPresenterProtocol {
   func wordTypeData(indexPath: IndexPath) -> (sectionKey: String, definition: Definition)?
   func getSynonyms() -> [Synonym]
   func fetchSynonymDetail(word: String)
+  func playAudio(word: [WordResponse])
+  func updateAudioButtonVisibility()
 }
 
 final class DetailPresenter {
@@ -29,6 +32,7 @@ final class DetailPresenter {
   private var wordResults = [WordResponse]()
   private var sections = ["Noun", "Verb", "Adjective"]
   private var synonyms = [Synonym]()
+  private var player: AVPlayer?
 
   init(
     view: DetailViewControllerProtocol!,
@@ -49,7 +53,8 @@ extension DetailPresenter: DetailPresenterProtocol {
       fetchSynonymWords(word: word)
     }
     view.configureData(result: wordResults)
-    view.setupTableView()
+    view.setupUI()
+    updateAudioButtonVisibility() 
   }
 
   func fetchSynonymDetail(word: String){
@@ -113,6 +118,36 @@ extension DetailPresenter: DetailPresenterProtocol {
     view.resetButtonVisibility()
   }
 
+  func playAudio(word: [WordResponse]) {
+    for response in word {
+      if let phonetics = response.phonetics {
+        for phonetic in phonetics {
+          if let audio = phonetic.audio, let url = URL(string: audio) {
+            player = AVPlayer(url: url)
+            player?.play()
+            return
+          }
+        }
+      }
+    }
+  }
+
+  func updateAudioButtonVisibility() {
+    var audioAvailable = false
+    for response in wordResults {
+      if let phonetics = response.phonetics {
+        for phonetic in phonetics {
+          if let audio = phonetic.audio {
+            audioAvailable = true
+            break
+          }
+        }
+      }
+    }
+    view.setAudioButton(hasAudio: audioAvailable)
+  }
+
+
   private func fetchSynonymWords(word: String) {
     interactor.fetchSynonymWords(word: word)
   }
@@ -140,7 +175,6 @@ extension DetailPresenter: DetailInteractorOutputProtocol {
   func fetchSynonymDetailOutput(result: WordResult) {
     switch result {
     case .success(let word):
-      setWordResults(result: word)
       view.configureData(result: word)
       view.reloadData()
     case .failure(let error):

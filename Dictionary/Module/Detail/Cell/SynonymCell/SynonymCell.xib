@@ -17,12 +17,12 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="loo-cz-cdV">
-                        <rect key="frame" x="4" y="8" width="298" height="101"/>
+                        <rect key="frame" x="8" y="8" width="294" height="101"/>
                     </stackView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="loo-cz-cdV" secondAttribute="bottom" constant="8" id="1fo-Ol-Ljw"/>
-                    <constraint firstItem="loo-cz-cdV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="IjQ-dp-foh"/>
+                    <constraint firstItem="loo-cz-cdV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="IjQ-dp-foh"/>
                     <constraint firstItem="loo-cz-cdV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="ZzF-ug-hgu"/>
                     <constraint firstAttribute="trailing" secondItem="loo-cz-cdV" secondAttribute="trailing" constant="4" id="eM7-U6-gpc"/>
                 </constraints>

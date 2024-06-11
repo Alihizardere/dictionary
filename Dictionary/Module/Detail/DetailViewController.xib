@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="Dictionary" customModuleProvider="target">
             <connections>
                 <outlet property="adjectiveButton" destination="f0M-tG-bFW" id="7Dl-O7-3y0"/>
+                <outlet property="audioButton" destination="Rtn-5W-PIY" id="PLL-1c-kna"/>
                 <outlet property="cancelButton" destination="YCE-Zu-wgJ" id="abB-cv-fAe"/>
                 <outlet property="nounButton" destination="Yec-3W-N7S" id="kId-Es-mdq"/>
                 <outlet property="secondaryTitle" destination="834-Il-WPP" id="yS8-hs-QrS"/>
@@ -56,12 +57,16 @@
                             <buttonConfiguration key="configuration" style="plain" image="speaker.circle" catalog="system" imagePadding="0.0">
                                 <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
+                            <connections>
+                                <action selector="audioButtonTapped:" destination="-1" eventType="touchUpInside" id="cJi-ry-cC6"/>
+                            </connections>
                         </button>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="7qy-gl-w0q">
-                            <rect key="frame" x="16" y="93.666666666666657" width="361" height="40"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="7qy-gl-w0q">
+                            <rect key="frame" x="16" y="93.666666666666657" width="327" height="40"/>
                             <subviews>
                                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCE-Zu-wgJ">
                                     <rect key="frame" x="0.0" y="0.0" width="0.0" height="40"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="multiply" catalog="system"/>
                                     <connections>
@@ -70,11 +75,15 @@
                                 </button>
                                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cm8-3p-vPW">
                                     <rect key="frame" x="0.0" y="0.0" width="0.0" height="40"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yec-3W-N7S">
-                                    <rect key="frame" x="0.0" y="0.0" width="107" height="40"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="40"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="tintColor" systemColor="labelColor"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="Noun"/>
                                     <connections>
@@ -82,7 +91,9 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4D-38-tPv">
-                                    <rect key="frame" x="107" y="0.0" width="98.666666666666686" height="40"/>
+                                    <rect key="frame" x="97.666666666666686" y="0.0" width="86" height="40"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="tintColor" systemColor="labelColor"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="Verb"/>
                                     <connections>
@@ -90,7 +101,9 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0M-tG-bFW">
-                                    <rect key="frame" x="205.66666666666663" y="0.0" width="155.33333333333337" height="40"/>
+                                    <rect key="frame" x="187.66666666666663" y="0.0" width="139.33333333333337" height="40"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="tintColor" systemColor="labelColor"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="Adjective"/>
                                     <connections>
@@ -105,7 +118,7 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemGray4Color"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="7qy-gl-w0q" secondAttribute="trailing" constant="16" id="5ud-Uk-xOU"/>
+                        <constraint firstAttribute="trailing" secondItem="7qy-gl-w0q" secondAttribute="trailing" constant="50" id="5ud-Uk-xOU"/>
                         <constraint firstAttribute="height" constant="160" id="BgN-TL-Ajg"/>
                         <constraint firstItem="7qy-gl-w0q" firstAttribute="top" secondItem="lmz-OE-ihH" secondAttribute="bottom" constant="16" id="DRm-JS-BOd"/>
                         <constraint firstItem="Rtn-5W-PIY" firstAttribute="centerY" secondItem="lmz-OE-ihH" secondAttribute="centerY" id="Izk-2m-J8N"/>
@@ -137,11 +150,14 @@
     <resources>
         <image name="multiply" catalog="system" width="128" height="111"/>
         <image name="speaker.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

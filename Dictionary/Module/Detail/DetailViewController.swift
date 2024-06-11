@@ -13,9 +13,10 @@ protocol DetailViewControllerProtocol: AnyObject {
   func hideButton(for section: String)
   func showButton(for section: String)
   func resetButtonVisibility()
-  func setupTableView()
+  func setupUI()
   func reloadData()
   func configureData(result: [WordResponse])
+  func setAudioButton(hasAudio: Bool)
 }
 
 final class DetailViewController: UIViewController {
@@ -29,6 +30,7 @@ final class DetailViewController: UIViewController {
   @IBOutlet weak var adjectiveButton: UIButton!
   @IBOutlet weak var cancelButton: UIButton!
   @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var audioButton: UIButton!
   var presenter: DetailPresenterProtocol!
   var selectedWord: [WordResponse]? {
     didSet {
@@ -42,6 +44,7 @@ final class DetailViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     presenter.viewDidLoad()
+    navigationController?.navigationBar.isHidden = false
   }
   
 // MARK: - Actions && Functions
@@ -63,7 +66,13 @@ final class DetailViewController: UIViewController {
     selectedSectionButton.isHidden = true
   }
 
-  private func toggleSection(section: String, button: UIButton) {
+  @IBAction func audioButtonTapped(_ sender: Any) {
+    if let word = selectedWord {
+      presenter.playAudio(word: word)
+    }
+  }
+
+  private func toggleSection(section: String) {
     presenter.toggleSection(section: section)
   }
 }
@@ -71,11 +80,27 @@ final class DetailViewController: UIViewController {
 // MARK: - DetailViewControllerProtocol
 extension DetailViewController: DetailViewControllerProtocol {
 
-  func setupTableView() {
+  func setupUI() {
     tableView.delegate = self
     tableView.dataSource = self
     tableView.register(UINib(nibName: WordTypeCell.identifier, bundle: nil), forCellReuseIdentifier: WordTypeCell.identifier)
     tableView.register(UINib(nibName: SynonymCell.identifier, bundle: nil), forCellReuseIdentifier: SynonymCell.identifier)
+
+    nounButton.layer.borderWidth = 2
+    nounButton.layer.borderColor = UIColor.lightGray.cgColor
+    nounButton.layer.cornerRadius = nounButton.frame.height / 2
+
+    verbButton.layer.borderWidth = 2
+    verbButton.layer.borderColor = UIColor.lightGray.cgColor
+    verbButton.layer.cornerRadius = verbButton.frame.height / 2
+
+    adjectiveButton.layer.borderWidth = 2
+    adjectiveButton.layer.borderColor = UIColor.lightGray.cgColor
+    adjectiveButton.layer.cornerRadius = adjectiveButton.frame.height / 2
+
+    cancelButton.layer.borderWidth = 2
+    cancelButton.layer.borderColor = UIColor.orange.cgColor
+    cancelButton.layer.cornerRadius = adjectiveButton.frame.height / 2
   }
   
   func reloadData() {
@@ -87,6 +112,8 @@ extension DetailViewController: DetailViewControllerProtocol {
   func configureData(result: [WordResponse]) {
     titleLabel.text = result.first?.word
     secondaryTitle.text = result.first?.phonetic
+    selectedWord = result
+    presenter.updateAudioButtonVisibility()
   }
 
   func setupSectionButtonDisplay() {
@@ -105,6 +132,10 @@ extension DetailViewController: DetailViewControllerProtocol {
     nounButton.isHidden = false
     verbButton.isHidden = false
     adjectiveButton.isHidden = false
+  }
+
+  func setAudioButton(hasAudio: Bool){
+    audioButton.isHidden = !hasAudio
   }
 
   func hideButton(for section: String) {
@@ -134,13 +165,6 @@ extension DetailViewController: DetailViewControllerProtocol {
   }
 }
 
-// MARK: - SynonymCellDelegate
-extension DetailViewController: SynonymCellDelegate {
-  func synonymButtonTapped(_ synonym: String) {
-    presenter.fetchSynonymDetail(word: synonym)
-  }
-}
-
 // MARK: - UITableViewDelegate, UITableViewDataSource
 extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
 
@@ -156,8 +180,8 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
 
     if indexPath.section == presenter.numberOfSections() - 1 {
       let cell = tableView.dequeueReusableCell(withIdentifier: SynonymCell.identifier , for: indexPath) as! SynonymCell
-      let synonyms = presenter.getSynonyms()
       cell.delegate = self
+      let synonyms = presenter.getSynonyms()
       cell.setupSynonymCell(synonyms: synonyms)
       return cell
     } else {
@@ -167,5 +191,12 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
       }
       return cell
     }
+  }
+}
+
+// MARK: - SynonymCellDelegate
+extension DetailViewController: SynonymCellDelegate {
+  func synonymButtonTapped(_ synonym: String) {
+    presenter.fetchSynonymDetail(word: synonym)
   }
 }

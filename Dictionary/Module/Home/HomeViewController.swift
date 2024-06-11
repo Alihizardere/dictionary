@@ -32,6 +32,7 @@ final class HomeViewController: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     presenter.viewWillAppear()
+    navigationController?.navigationBar.isHidden = true
   }
 
   // MARK: - Acitons && Functions
@@ -47,7 +48,7 @@ final class HomeViewController: UIViewController {
   }
 
   private func searchButtonForKeyboard(show: Bool) {
-    let translationY: CGFloat = show ? -view.frame.height / 2.85 : 0
+    let translationY: CGFloat = show ? -view.frame.height / 3.20 : 0
     UIView.animate(withDuration: 0.3) {
       self.searchButton.transform = CGAffineTransform(translationX: 0, y: translationY)
     }
