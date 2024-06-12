@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EntryViewController" customModule="Dictionary" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ews-6Q-HgE">
+                    <rect key="frame" x="16" y="451.33333333333331" width="361" height="119.99999999999994"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epy-4G-vhC">
+                            <rect key="frame" x="0.0" y="0.0" width="361" height="50"/>
+                            <color key="backgroundColor" name="Button Color"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="9cZ-d5-Ap0"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="PLAY">
+                                <color key="titleColor" red="0.94901960780000005" green="0.94509803920000002" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="playButtonTapped:" destination="-1" eventType="touchUpInside" id="S65-jl-81V"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvT-vR-wJ7">
+                            <rect key="frame" x="0.0" y="70.000000000000057" width="361" height="50"/>
+                            <color key="backgroundColor" name="Background Color"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="TOPICS">
+                                <color key="titleColor" red="0.94901960780000005" green="0.94509803920000002" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionMarkIcon" translatesAutoresizingMaskIntoConstraints="NO" id="dSv-gZ-q85">
+                    <rect key="frame" x="151.66666666666666" y="228.66666666666663" width="90" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="3tW-6j-dla"/>
+                        <constraint firstAttribute="height" constant="90" id="kwU-f4-1fc"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn • Take Quiz • Repeat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTN-Wr-i7S">
+                    <rect key="frame" x="16" y="402.33333333333331" width="361" height="17"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                    <color key="textColor" name="Button Color"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOb-z8-nr6">
+                    <rect key="frame" x="16" y="358.66666666666669" width="361" height="33.666666666666686"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="28"/>
+                    <color key="textColor" name="Background Color"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="jTN-Wr-i7S" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="6UB-c5-REo"/>
+                <constraint firstAttribute="trailing" secondItem="GOb-z8-nr6" secondAttribute="trailing" constant="16" id="9Os-lq-pn6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ews-6Q-HgE" secondAttribute="trailing" constant="16" id="AE6-9h-skB"/>
+                <constraint firstItem="Ews-6Q-HgE" firstAttribute="top" secondItem="jTN-Wr-i7S" secondAttribute="bottom" constant="32" id="BI6-bo-ktQ"/>
+                <constraint firstItem="jTN-Wr-i7S" firstAttribute="top" secondItem="GOb-z8-nr6" secondAttribute="bottom" constant="10" id="GJl-la-1Gn"/>
+                <constraint firstItem="Ews-6Q-HgE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PAV-T5-5m8"/>
+                <constraint firstItem="Ews-6Q-HgE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="UnG-qY-vTa"/>
+                <constraint firstItem="GOb-z8-nr6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="e7U-vW-ZBt"/>
+                <constraint firstAttribute="trailing" secondItem="jTN-Wr-i7S" secondAttribute="trailing" constant="16" id="fH8-mN-JtV"/>
+                <constraint firstItem="GOb-z8-nr6" firstAttribute="top" secondItem="dSv-gZ-q85" secondAttribute="bottom" constant="40" id="fe8-cH-Y1q"/>
+                <constraint firstItem="Ews-6Q-HgE" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="1.2" id="ufG-Zt-hXg"/>
+                <constraint firstItem="dSv-gZ-q85" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zS9-pb-kO6"/>
+            </constraints>
+            <point key="canvasLocation" x="3.8167938931297707" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="questionMarkIcon" width="512" height="512"/>
+        <namedColor name="Background Color">
+            <color red="0.0" green="0.14100000262260437" blue="0.32499998807907104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Button Color">
+            <color red="0.0" green="0.66299998760223389" blue="0.81599998474121094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

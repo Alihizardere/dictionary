@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D21FE2C2C19AFA000648B7E /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D21FE2B2C19AFA000648B7E /* UIAlertController.swift */; };
+		3D3C97712C18CE050028DB55 /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3C976F2C18CE050028DB55 /* QuestionCell.swift */; };
+		3D3C97722C18CE050028DB55 /* QuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D3C97702C18CE050028DB55 /* QuestionCell.xib */; };
+		3D3C97742C18E7CB0028DB55 /* QuizMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3C97732C18E7CB0028DB55 /* QuizMockData.swift */; };
 		3D6AFAE92C11235000AFFDB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFAE82C11235000AFFDB1 /* AppDelegate.swift */; };
 		3D6AFAEB2C11235000AFFDB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFAEA2C11235000AFFDB1 /* SceneDelegate.swift */; };
 		3D6AFAF02C11235000AFFDB1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 3D6AFAEF2C11235000AFFDB1 /* Base */; };
@@ -32,10 +36,20 @@
 		3D6AFB432C11385200AFFDB1 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFB422C11385200AFFDB1 /* HomeRouter.swift */; };
 		3D6AFB462C11426300AFFDB1 /* WordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFB452C11426300AFFDB1 /* WordResponse.swift */; };
 		3D6AFB482C1142CC00AFFDB1 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFB472C1142CC00AFFDB1 /* ServiceManager.swift */; };
+		3D71541C2C189D0F001DAE41 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71541A2C189D0F001DAE41 /* EntryViewController.swift */; };
+		3D71541D2C189D0F001DAE41 /* EntryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D71541B2C189D0F001DAE41 /* EntryViewController.xib */; };
+		3D7154212C189D41001DAE41 /* EntryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7154202C189D41001DAE41 /* EntryPresenter.swift */; };
+		3D7154232C189D53001DAE41 /* EntryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7154222C189D53001DAE41 /* EntryRouter.swift */; };
+		3D7154262C189D7D001DAE41 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7154242C189D7D001DAE41 /* QuizViewController.swift */; };
+		3D7154272C189D7D001DAE41 /* QuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D7154252C189D7D001DAE41 /* QuizViewController.xib */; };
+		3D71542B2C189D9A001DAE41 /* QuizPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71542A2C189D9A001DAE41 /* QuizPresenter.swift */; };
+		3D71542D2C189DA3001DAE41 /* QuizRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71542C2C189DA3001DAE41 /* QuizRouter.swift */; };
+		3D7154302C189DD4001DAE41 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71542E2C189DD4001DAE41 /* ResultViewController.swift */; };
+		3D7154312C189DD4001DAE41 /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D71542F2C189DD4001DAE41 /* ResultViewController.xib */; };
+		3D7154352C189DFD001DAE41 /* ResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7154342C189DFD001DAE41 /* ResultPresenter.swift */; };
+		3D7154372C189E18001DAE41 /* ResultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7154362C189E18001DAE41 /* ResultRouter.swift */; };
 		3DA2F8CA2C15EC29000A8437 /* WordTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DA2F8C92C15EC29000A8437 /* WordTypeCell.xib */; };
 		3DA2F8CB2C15EC29000A8437 /* WordTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA2F8C82C15EC29000A8437 /* WordTypeCell.swift */; };
-		3DC476F42C120D5B005DACA8 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DC476F32C120D5B005DACA8 /* SecondViewController.xib */; };
-		3DC476F52C120D5B005DACA8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC476F22C120D5B005DACA8 /* SecondViewController.swift */; };
 		3DC476FB2C120FD4005DACA8 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC476FA2C120FD4005DACA8 /* CustomTabBar.swift */; };
 		3DE12FB42C145A2600FF2926 /* RecentSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE12FB22C145A2600FF2926 /* RecentSearchCell.swift */; };
 		3DE12FB52C145A2600FF2926 /* RecentSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DE12FB32C145A2600FF2926 /* RecentSearchCell.xib */; };
@@ -69,6 +83,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D21FE2B2C19AFA000648B7E /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
+		3D3C976F2C18CE050028DB55 /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
+		3D3C97702C18CE050028DB55 /* QuestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionCell.xib; sourceTree = "<group>"; };
+		3D3C97732C18E7CB0028DB55 /* QuizMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizMockData.swift; sourceTree = "<group>"; };
 		3D6AFAE52C11235000AFFDB1 /* Dictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D6AFAE82C11235000AFFDB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D6AFAEA2C11235000AFFDB1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,10 +116,20 @@
 		3D6AFB422C11385200AFFDB1 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		3D6AFB452C11426300AFFDB1 /* WordResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordResponse.swift; sourceTree = "<group>"; };
 		3D6AFB472C1142CC00AFFDB1 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		3D71541A2C189D0F001DAE41 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		3D71541B2C189D0F001DAE41 /* EntryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntryViewController.xib; sourceTree = "<group>"; };
+		3D7154202C189D41001DAE41 /* EntryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryPresenter.swift; sourceTree = "<group>"; };
+		3D7154222C189D53001DAE41 /* EntryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryRouter.swift; sourceTree = "<group>"; };
+		3D7154242C189D7D001DAE41 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		3D7154252C189D7D001DAE41 /* QuizViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizViewController.xib; sourceTree = "<group>"; };
+		3D71542A2C189D9A001DAE41 /* QuizPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPresenter.swift; sourceTree = "<group>"; };
+		3D71542C2C189DA3001DAE41 /* QuizRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRouter.swift; sourceTree = "<group>"; };
+		3D71542E2C189DD4001DAE41 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		3D71542F2C189DD4001DAE41 /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
+		3D7154342C189DFD001DAE41 /* ResultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPresenter.swift; sourceTree = "<group>"; };
+		3D7154362C189E18001DAE41 /* ResultRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultRouter.swift; sourceTree = "<group>"; };
 		3DA2F8C82C15EC29000A8437 /* WordTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTypeCell.swift; sourceTree = "<group>"; };
 		3DA2F8C92C15EC29000A8437 /* WordTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordTypeCell.xib; sourceTree = "<group>"; };
-		3DC476F22C120D5B005DACA8 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		3DC476F32C120D5B005DACA8 /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 		3DC476FA2C120FD4005DACA8 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		3DE12FB22C145A2600FF2926 /* RecentSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchCell.swift; sourceTree = "<group>"; };
 		3DE12FB32C145A2600FF2926 /* RecentSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentSearchCell.xib; sourceTree = "<group>"; };
@@ -142,6 +170,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D3C976E2C18CDE30028DB55 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3D3C976F2C18CE050028DB55 /* QuestionCell.swift */,
+				3D3C97702C18CE050028DB55 /* QuestionCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		3D6AFADC2C11235000AFFDB1 = {
 			isa = PBXGroup;
 			children = (
@@ -170,8 +207,6 @@
 				3D6AFB1D2C11255E00AFFDB1 /* Module */,
 				3D6AFB1C2C1124ED00AFFDB1 /* Resources */,
 				3D6AFAF92C11235100AFFDB1 /* Info.plist */,
-				3DC476F22C120D5B005DACA8 /* SecondViewController.swift */,
-				3DC476F32C120D5B005DACA8 /* SecondViewController.xib */,
 			);
 			path = Dictionary;
 			sourceTree = "<group>";
@@ -221,6 +256,7 @@
 				3D6AFB442C1141F700AFFDB1 /* Entity */,
 				3D6AFB392C11379D00AFFDB1 /* Home */,
 				3DF099EE2C13ABDB00044B20 /* Detail */,
+				3D7154162C1899A2001DAE41 /* Exercise */,
 				3D6AFB2E2C112CCC00AFFDB1 /* Splash */,
 				3D6AFB252C112B3500AFFDB1 /* Base */,
 			);
@@ -277,8 +313,53 @@
 			children = (
 				3D6AFB452C11426300AFFDB1 /* WordResponse.swift */,
 				3DECF8F32C16646F00A97462 /* Synonym.swift */,
+				3D3C97732C18E7CB0028DB55 /* QuizMockData.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		3D7154162C1899A2001DAE41 /* Exercise */ = {
+			isa = PBXGroup;
+			children = (
+				3D7154172C189C7A001DAE41 /* Entry */,
+				3D7154182C189C82001DAE41 /* Quiz */,
+				3D7154192C189C8E001DAE41 /* Result */,
+			);
+			path = Exercise;
+			sourceTree = "<group>";
+		};
+		3D7154172C189C7A001DAE41 /* Entry */ = {
+			isa = PBXGroup;
+			children = (
+				3D71541A2C189D0F001DAE41 /* EntryViewController.swift */,
+				3D71541B2C189D0F001DAE41 /* EntryViewController.xib */,
+				3D7154202C189D41001DAE41 /* EntryPresenter.swift */,
+				3D7154222C189D53001DAE41 /* EntryRouter.swift */,
+			);
+			path = Entry;
+			sourceTree = "<group>";
+		};
+		3D7154182C189C82001DAE41 /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				3D3C976E2C18CDE30028DB55 /* Cell */,
+				3D7154242C189D7D001DAE41 /* QuizViewController.swift */,
+				3D7154252C189D7D001DAE41 /* QuizViewController.xib */,
+				3D71542A2C189D9A001DAE41 /* QuizPresenter.swift */,
+				3D71542C2C189DA3001DAE41 /* QuizRouter.swift */,
+			);
+			path = Quiz;
+			sourceTree = "<group>";
+		};
+		3D7154192C189C8E001DAE41 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				3D71542E2C189DD4001DAE41 /* ResultViewController.swift */,
+				3D71542F2C189DD4001DAE41 /* ResultViewController.xib */,
+				3D7154342C189DFD001DAE41 /* ResultPresenter.swift */,
+				3D7154362C189E18001DAE41 /* ResultRouter.swift */,
+			);
+			path = Result;
 			sourceTree = "<group>";
 		};
 		3DA2F8C72C15EC00000A8437 /* Cell */ = {
@@ -311,6 +392,7 @@
 			isa = PBXGroup;
 			children = (
 				3DE12FBB2C14AC5F00FF2926 /* UITableView.swift */,
+				3D21FE2B2C19AFA000648B7E /* UIAlertController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -452,12 +534,15 @@
 			files = (
 				3DA2F8CA2C15EC29000A8437 /* WordTypeCell.xib in Resources */,
 				3D6AFAF52C11235100AFFDB1 /* Assets.xcassets in Resources */,
+				3D3C97722C18CE050028DB55 /* QuestionCell.xib in Resources */,
 				3D6AFAF82C11235100AFFDB1 /* Base in Resources */,
 				3DF099F22C13AC0D00044B20 /* DetailViewController.xib in Resources */,
-				3DC476F42C120D5B005DACA8 /* SecondViewController.xib in Resources */,
+				3D7154272C189D7D001DAE41 /* QuizViewController.xib in Resources */,
 				3DECF8F12C16591200A97462 /* SynonymCell.xib in Resources */,
 				3DE12FB52C145A2600FF2926 /* RecentSearchCell.xib in Resources */,
+				3D7154312C189DD4001DAE41 /* ResultViewController.xib in Resources */,
 				3D6AFB3D2C1137B500AFFDB1 /* HomeViewController.xib in Resources */,
+				3D71541D2C189D0F001DAE41 /* EntryViewController.xib in Resources */,
 				3D6AFAF02C11235000AFFDB1 /* Base in Resources */,
 				3D6AFB322C112D0600AFFDB1 /* SplashViewController.xib in Resources */,
 			);
@@ -488,31 +573,42 @@
 				3D6AFB462C11426300AFFDB1 /* WordResponse.swift in Sources */,
 				3DE12FB72C145C9600FF2926 /* WordRepository.swift in Sources */,
 				3DC476FB2C120FD4005DACA8 /* CustomTabBar.swift in Sources */,
+				3D21FE2C2C19AFA000648B7E /* UIAlertController.swift in Sources */,
+				3D71542D2C189DA3001DAE41 /* QuizRouter.swift in Sources */,
+				3D7154212C189D41001DAE41 /* EntryPresenter.swift in Sources */,
 				3D6AFB222C1126D900AFFDB1 /* NetworkManager.swift in Sources */,
 				3DE12FBC2C14AC5F00FF2926 /* UITableView.swift in Sources */,
-				3DC476F52C120D5B005DACA8 /* SecondViewController.swift in Sources */,
 				3D6AFB3F2C11383500AFFDB1 /* HomeInteractor.swift in Sources */,
 				3D6AFAF32C11235000AFFDB1 /* Dictionary.xcdatamodeld in Sources */,
 				3DA2F8CB2C15EC29000A8437 /* WordTypeCell.swift in Sources */,
+				3D71541C2C189D0F001DAE41 /* EntryViewController.swift in Sources */,
 				3DF099F12C13AC0D00044B20 /* DetailViewController.swift in Sources */,
 				3D6AFB3C2C1137B500AFFDB1 /* HomeViewController.swift in Sources */,
+				3D3C97742C18E7CB0028DB55 /* QuizMockData.swift in Sources */,
 				3D6AFB432C11385200AFFDB1 /* HomeRouter.swift in Sources */,
 				3DECF8F22C16591200A97462 /* SynonymCell.swift in Sources */,
 				3D6AFAE92C11235000AFFDB1 /* AppDelegate.swift in Sources */,
 				3D6AFB272C112B6B00AFFDB1 /* BaseViewController.swift in Sources */,
+				3D7154262C189D7D001DAE41 /* QuizViewController.swift in Sources */,
+				3D7154372C189E18001DAE41 /* ResultRouter.swift in Sources */,
 				3D6AFB342C112D7D00AFFDB1 /* SplashInteractor.swift in Sources */,
 				3DF099F82C13AD8500044B20 /* DetailRouter.swift in Sources */,
 				3D6AFAEB2C11235000AFFDB1 /* SceneDelegate.swift in Sources */,
 				3D6AFB412C11384800AFFDB1 /* HomePresenter.swift in Sources */,
+				3D7154352C189DFD001DAE41 /* ResultPresenter.swift in Sources */,
 				3DE12FB42C145A2600FF2926 /* RecentSearchCell.swift in Sources */,
 				3DF099F62C13AD7A00044B20 /* DetailPresenter.swift in Sources */,
+				3D3C97712C18CE050028DB55 /* QuestionCell.swift in Sources */,
 				3D6AFB482C1142CC00AFFDB1 /* ServiceManager.swift in Sources */,
 				3D6AFB382C112DA500AFFDB1 /* SplashRouter.swift in Sources */,
+				3D71542B2C189D9A001DAE41 /* QuizPresenter.swift in Sources */,
 				3D6AFB202C1126C600AFFDB1 /* API.swift in Sources */,
 				3DECF8F42C16646F00A97462 /* Synonym.swift in Sources */,
 				3DF099F42C13AD6300044B20 /* DetailInteractor.swift in Sources */,
 				3D6AFB312C112D0600AFFDB1 /* SplashViewController.swift in Sources */,
 				3D6AFB362C112D9000AFFDB1 /* SplashPresenter.swift in Sources */,
+				3D7154232C189D53001DAE41 /* EntryRouter.swift in Sources */,
+				3D7154302C189DD4001DAE41 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

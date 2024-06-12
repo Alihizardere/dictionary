@@ -22,12 +22,12 @@ class CustomTabBar: UITabBarController {
     return navController
   }()
 
-  private lazy var secondVC: UINavigationController = {
-    let vc = SecondViewController()
+  private lazy var exerciseVC: UINavigationController = {
+    let vc = EntryRouter.createModule()
     let item = UITabBarItem(
-      title: "Favorites",
-      image: UIImage(systemName: "star"),
-      selectedImage: UIImage(systemName: "star.fill")
+      title: "Exercise",
+      image: UIImage(systemName: "book.closed"),
+      selectedImage: UIImage(systemName: "book.closed.fill")
     )
     vc.tabBarItem = item
     let navController = UINavigationController(rootViewController: vc)
@@ -45,6 +45,6 @@ class CustomTabBar: UITabBarController {
     tabBar.backgroundColor = .orange
     tabBar.tintColor = .white
     tabBar.unselectedItemTintColor = .systemGray4
-    self.viewControllers = [homeVC, secondVC]
+    self.viewControllers = [homeVC, exerciseVC]
   }
 }
