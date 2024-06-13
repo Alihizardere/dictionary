@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D1993942C1AF983008C4A94 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1993932C1AF983008C4A94 /* UIView.swift */; };
 		3D21FE2C2C19AFA000648B7E /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D21FE2B2C19AFA000648B7E /* UIAlertController.swift */; };
 		3D3C97712C18CE050028DB55 /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3C976F2C18CE050028DB55 /* QuestionCell.swift */; };
 		3D3C97722C18CE050028DB55 /* QuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D3C97702C18CE050028DB55 /* QuestionCell.xib */; };
@@ -96,6 +97,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D1993932C1AF983008C4A94 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		3D21FE2B2C19AFA000648B7E /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
 		3D3C976F2C18CE050028DB55 /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
 		3D3C97702C18CE050028DB55 /* QuestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionCell.xib; sourceTree = "<group>"; };
@@ -422,6 +424,7 @@
 			children = (
 				3DE12FBB2C14AC5F00FF2926 /* UITableView.swift */,
 				3D21FE2B2C19AFA000648B7E /* UIAlertController.swift */,
+				3D1993932C1AF983008C4A94 /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -648,6 +651,7 @@
 				3DE12FBC2C14AC5F00FF2926 /* UITableView.swift in Sources */,
 				3D6AFB3F2C11383500AFFDB1 /* HomeInteractor.swift in Sources */,
 				3DFBECF02C1A59F200CA6B49 /* FavoriteViewController.swift in Sources */,
+				3D1993942C1AF983008C4A94 /* UIView.swift in Sources */,
 				3D6AFAF32C11235000AFFDB1 /* Dictionary.xcdatamodeld in Sources */,
 				3DFBECEB2C1A06C000CA6B49 /* TranslateResponse.swift in Sources */,
 				3DA2F8CB2C15EC29000A8437 /* WordTypeCell.swift in Sources */,

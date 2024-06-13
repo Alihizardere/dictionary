@@ -66,7 +66,7 @@ class CustomTabBar: UITabBarController {
 
   // MARK: -  Functions
   private func setupTabBar(){
-    tabBar.backgroundColor = .orange
+    tabBar.backgroundColor = .main
     tabBar.tintColor = .white
     tabBar.unselectedItemTintColor = .systemGray4
     self.viewControllers = [homeVC, translateVC, favoriteVC, exerciseVC]

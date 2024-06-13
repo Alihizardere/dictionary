@@ -8,7 +8,10 @@
 import Foundation
 
 protocol TranslatePresenterProtocol {
-
+  func viewDidLoad()
+  func translateText(text: String?, targetLang: String?)
+  func clearButtonTapped()
+  func changeButtonTapped()
 }
 
 final class TranslatePresenter {
@@ -29,9 +32,36 @@ final class TranslatePresenter {
 }
 
 extension TranslatePresenter: TranslatePresenterProtocol {
+  func viewDidLoad() {
+    view.setupUI()
+  }
+  
+  func translateText(text: String?, targetLang: String?) {
+    interactor.translateText(text: text, targetLang: targetLang)
+    view.showIndicator()
+  }
+
+  func clearButtonTapped() {
+    view.setupClearButton()
+  }
+
+  func changeButtonTapped() {
+    view.setupChangeButton()
+  }
 
 }
 
 extension TranslatePresenter: TranslateInteractorOutputProtocol {
-
+  func translateTextOutput(result: translateSourceResult) {
+    switch result {
+    case .success(let translateResponse):
+      DispatchQueue.main.async {
+        self.view.hiddenIndicator()
+         let text = translateResponse.translations.first?.text ?? "Çeviri bulunamadı"
+        self.view.configureTranslatedText(text: text)
+      }
+    case .failure(let error):
+      print(error.localizedDescription)
+    }
+  }
 }
