@@ -47,20 +47,6 @@
                                 </label>
                             </subviews>
                         </stackView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rtn-5W-PIY">
-                            <rect key="frame" x="332" y="24.333333333333329" width="45" height="45"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="45" id="JzO-04-H9E"/>
-                                <constraint firstAttribute="height" constant="45" id="fpc-9O-ZfF"/>
-                            </constraints>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" image="speaker.circle" catalog="system" imagePadding="0.0">
-                                <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </buttonConfiguration>
-                            <connections>
-                                <action selector="audioButtonTapped:" destination="-1" eventType="touchUpInside" id="cJi-ry-cC6"/>
-                            </connections>
-                        </button>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="7qy-gl-w0q">
                             <rect key="frame" x="16" y="93.666666666666657" width="327" height="40"/>
                             <subviews>
@@ -115,17 +101,47 @@
                                 <constraint firstAttribute="height" constant="40" id="ufZ-zY-iZh"/>
                             </constraints>
                         </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruR-nI-fxQ">
+                            <rect key="frame" x="332" y="24.333333333333329" width="45" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="45" id="jWh-dl-Vvq"/>
+                                <constraint firstAttribute="height" constant="45" id="otS-pn-Iep"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="bookmark.fill" catalog="system" imagePadding="0.0">
+                                <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="favoriteButtonTapped:" destination="-1" eventType="touchUpInside" id="qWe-J4-vTt"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rtn-5W-PIY">
+                            <rect key="frame" x="93.666666666666671" y="24.333333333333329" width="45.000000000000014" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="45" id="JzO-04-H9E"/>
+                                <constraint firstAttribute="height" constant="45" id="fpc-9O-ZfF"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="speaker.circle" catalog="system" imagePadding="0.0">
+                                <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="audioButtonTapped:" destination="-1" eventType="touchUpInside" id="cJi-ry-cC6"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemGray4Color"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="7qy-gl-w0q" secondAttribute="trailing" constant="50" id="5ud-Uk-xOU"/>
                         <constraint firstAttribute="height" constant="160" id="BgN-TL-Ajg"/>
                         <constraint firstItem="7qy-gl-w0q" firstAttribute="top" secondItem="lmz-OE-ihH" secondAttribute="bottom" constant="16" id="DRm-JS-BOd"/>
+                        <constraint firstItem="ruR-nI-fxQ" firstAttribute="centerY" secondItem="Rtn-5W-PIY" secondAttribute="centerY" id="FwB-ot-xER"/>
                         <constraint firstItem="Rtn-5W-PIY" firstAttribute="centerY" secondItem="lmz-OE-ihH" secondAttribute="centerY" id="Izk-2m-J8N"/>
                         <constraint firstItem="lmz-OE-ihH" firstAttribute="leading" secondItem="dFi-5L-jWL" secondAttribute="leading" constant="16" id="c6i-YU-XOk"/>
                         <constraint firstItem="7qy-gl-w0q" firstAttribute="leading" secondItem="dFi-5L-jWL" secondAttribute="leading" constant="16" id="chs-sp-Eec"/>
                         <constraint firstItem="lmz-OE-ihH" firstAttribute="top" secondItem="dFi-5L-jWL" secondAttribute="top" constant="16" id="dFZ-sN-gnx"/>
-                        <constraint firstAttribute="trailing" secondItem="Rtn-5W-PIY" secondAttribute="trailing" constant="16" id="qwa-Yv-pXc"/>
+                        <constraint firstItem="Rtn-5W-PIY" firstAttribute="leading" secondItem="lmz-OE-ihH" secondAttribute="trailing" constant="16" id="qLR-6r-c1L"/>
+                        <constraint firstAttribute="trailing" secondItem="ruR-nI-fxQ" secondAttribute="trailing" constant="16" id="xWt-qc-hol"/>
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pKZ-W9-bMj">
@@ -148,6 +164,7 @@
         </view>
     </objects>
     <resources>
+        <image name="bookmark.fill" catalog="system" width="110" height="128"/>
         <image name="multiply" catalog="system" width="128" height="111"/>
         <image name="speaker.circle" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">

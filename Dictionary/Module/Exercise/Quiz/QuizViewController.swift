@@ -63,7 +63,9 @@ extension QuizViewController: QuizViewControllerProtocol {
   }
 
   func reloadData() {
-    collectionView.reloadData()
+    DispatchQueue.main.async {
+      self.collectionView.reloadData()
+    }
   }
   
   func setupNextButtonTitle() {

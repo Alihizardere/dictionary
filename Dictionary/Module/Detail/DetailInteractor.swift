@@ -8,13 +8,14 @@
 import Foundation
 
 fileprivate var wordService: WordServiceProtocol = API()
+fileprivate var wordRepository: WordRepositoryProtocol = WordRepository()
 typealias SynonymWordResult = Result<[Synonym], NetworkError>
 typealias WordResult = Result<[WordResponse], NetworkError>
-
 
 protocol DetailInteractorProtocol {
   func fetchSynonymWords(word: String)
   func fetchSynonymDetail(for synonym: String)
+  func saveFavoriteWord(word: String)
 }
 
 protocol DetailInteractorOutputProtocol {
@@ -46,4 +47,7 @@ extension DetailInteractor: DetailInteractorProtocol {
     }
   }
 
+  func saveFavoriteWord(word: String) {
+    wordRepository.saveFavoriteWord(word: word)
+  }
 }

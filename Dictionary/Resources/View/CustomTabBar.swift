@@ -22,6 +22,30 @@ class CustomTabBar: UITabBarController {
     return navController
   }()
 
+  private lazy var translateVC: UINavigationController = {
+    let vc = TranslateRouter.createModule()
+    let item = UITabBarItem(
+      title: "Translate",
+      image: UIImage(systemName: "bubble.left.and.text.bubble.right"),
+      selectedImage: UIImage(systemName: "bubble.left.and.text.bubble.right.fill")
+    )
+    vc.tabBarItem = item
+    let navController = UINavigationController(rootViewController: vc)
+    return navController
+  }()
+
+  private lazy var favoriteVC: UINavigationController = {
+    let vc = FavoriteRouter.createModule()
+    let item = UITabBarItem(
+      title: "Favorites",
+      image: UIImage(systemName: "star"),
+      selectedImage: UIImage(systemName: "star.fill")
+    )
+    vc.tabBarItem = item
+    let navController = UINavigationController(rootViewController: vc)
+    return navController
+  }()
+
   private lazy var exerciseVC: UINavigationController = {
     let vc = EntryRouter.createModule()
     let item = UITabBarItem(
@@ -45,6 +69,6 @@ class CustomTabBar: UITabBarController {
     tabBar.backgroundColor = .orange
     tabBar.tintColor = .white
     tabBar.unselectedItemTintColor = .systemGray4
-    self.viewControllers = [homeVC, exerciseVC]
+    self.viewControllers = [homeVC, translateVC, favoriteVC, exerciseVC]
   }
 }

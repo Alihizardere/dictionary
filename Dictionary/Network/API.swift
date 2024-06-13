@@ -21,6 +21,8 @@ final class API {
 
   var wordURL = "https://api.dictionaryapi.dev/api/v2/entries/en/"
   var synonymURL = "https://api.datamuse.com/words?rel_syn="
+  var deepLTranslateURL = "https://api-free.deepl.com/v2/translate"
+  let deepLAuthKey = "017b0830-ff90-4df6-97ab-f3c35de22b2b:fx"
 
   private var service: NetworkService
 

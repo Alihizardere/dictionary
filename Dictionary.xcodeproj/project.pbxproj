@@ -63,6 +63,19 @@
 		3DF099F42C13AD6300044B20 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF099F32C13AD6300044B20 /* DetailInteractor.swift */; };
 		3DF099F62C13AD7A00044B20 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF099F52C13AD7A00044B20 /* DetailPresenter.swift */; };
 		3DF099F82C13AD8500044B20 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF099F72C13AD8500044B20 /* DetailRouter.swift */; };
+		3DFBECEB2C1A06C000CA6B49 /* TranslateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFBECEA2C1A06C000CA6B49 /* TranslateResponse.swift */; };
+		3DFBECEF2C1A59F200CA6B49 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DFBECEE2C1A59F200CA6B49 /* FavoriteViewController.xib */; };
+		3DFBECF02C1A59F200CA6B49 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFBECED2C1A59F200CA6B49 /* FavoriteViewController.swift */; };
+		3DFBECF22C1A5A5500CA6B49 /* FavoriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFBECF12C1A5A5500CA6B49 /* FavoriteInteractor.swift */; };
+		3DFBECF52C1A5AE700CA6B49 /* FavoritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFBECF42C1A5AE700CA6B49 /* FavoritePresenter.swift */; };
+		3DFBECF72C1A5B5C00CA6B49 /* FavoriteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFBECF62C1A5B5C00CA6B49 /* FavoriteRouter.swift */; };
+		3DFBECFB2C1A5F5500CA6B49 /* TranslateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DFBECFA2C1A5F5500CA6B49 /* TranslateViewController.xib */; };
+		3DFBECFC2C1A5F5500CA6B49 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFBECF92C1A5F5500CA6B49 /* TranslateViewController.swift */; };
+		3DFBECFE2C1A5F9C00CA6B49 /* TranslateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFBECFD2C1A5F9C00CA6B49 /* TranslateInteractor.swift */; };
+		3DFBED002C1A5FB300CA6B49 /* TranslatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFBECFF2C1A5FB300CA6B49 /* TranslatePresenter.swift */; };
+		3DFBED022C1A5FC200CA6B49 /* TranslateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFBED012C1A5FC200CA6B49 /* TranslateRouter.swift */; };
+		3DFBED082C1A79B700CA6B49 /* FavoriteWordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DFBED072C1A79B700CA6B49 /* FavoriteWordCell.xib */; };
+		3DFBED092C1A79B700CA6B49 /* FavoriteWordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFBED062C1A79B700CA6B49 /* FavoriteWordCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +156,19 @@
 		3DF099F32C13AD6300044B20 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		3DF099F52C13AD7A00044B20 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		3DF099F72C13AD8500044B20 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		3DFBECEA2C1A06C000CA6B49 /* TranslateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateResponse.swift; sourceTree = "<group>"; };
+		3DFBECED2C1A59F200CA6B49 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		3DFBECEE2C1A59F200CA6B49 /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
+		3DFBECF12C1A5A5500CA6B49 /* FavoriteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteInteractor.swift; sourceTree = "<group>"; };
+		3DFBECF42C1A5AE700CA6B49 /* FavoritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePresenter.swift; sourceTree = "<group>"; };
+		3DFBECF62C1A5B5C00CA6B49 /* FavoriteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRouter.swift; sourceTree = "<group>"; };
+		3DFBECF92C1A5F5500CA6B49 /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
+		3DFBECFA2C1A5F5500CA6B49 /* TranslateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TranslateViewController.xib; sourceTree = "<group>"; };
+		3DFBECFD2C1A5F9C00CA6B49 /* TranslateInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateInteractor.swift; sourceTree = "<group>"; };
+		3DFBECFF2C1A5FB300CA6B49 /* TranslatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatePresenter.swift; sourceTree = "<group>"; };
+		3DFBED012C1A5FC200CA6B49 /* TranslateRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateRouter.swift; sourceTree = "<group>"; };
+		3DFBED062C1A79B700CA6B49 /* FavoriteWordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteWordCell.swift; sourceTree = "<group>"; };
+		3DFBED072C1A79B700CA6B49 /* FavoriteWordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteWordCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +283,8 @@
 				3D6AFB392C11379D00AFFDB1 /* Home */,
 				3DF099EE2C13ABDB00044B20 /* Detail */,
 				3D7154162C1899A2001DAE41 /* Exercise */,
+				3DFBECEC2C1A59B800CA6B49 /* Favorite */,
+				3DFBECF82C1A5F3000CA6B49 /* Translate */,
 				3D6AFB2E2C112CCC00AFFDB1 /* Splash */,
 				3D6AFB252C112B3500AFFDB1 /* Base */,
 			);
@@ -314,6 +342,7 @@
 				3D6AFB452C11426300AFFDB1 /* WordResponse.swift */,
 				3DECF8F32C16646F00A97462 /* Synonym.swift */,
 				3D3C97732C18E7CB0028DB55 /* QuizMockData.swift */,
+				3DFBECEA2C1A06C000CA6B49 /* TranslateResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -428,6 +457,40 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		3DFBECEC2C1A59B800CA6B49 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				3DFBED032C1A797700CA6B49 /* Cell */,
+				3DFBECED2C1A59F200CA6B49 /* FavoriteViewController.swift */,
+				3DFBECEE2C1A59F200CA6B49 /* FavoriteViewController.xib */,
+				3DFBECF12C1A5A5500CA6B49 /* FavoriteInteractor.swift */,
+				3DFBECF42C1A5AE700CA6B49 /* FavoritePresenter.swift */,
+				3DFBECF62C1A5B5C00CA6B49 /* FavoriteRouter.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		3DFBECF82C1A5F3000CA6B49 /* Translate */ = {
+			isa = PBXGroup;
+			children = (
+				3DFBECF92C1A5F5500CA6B49 /* TranslateViewController.swift */,
+				3DFBECFA2C1A5F5500CA6B49 /* TranslateViewController.xib */,
+				3DFBECFD2C1A5F9C00CA6B49 /* TranslateInteractor.swift */,
+				3DFBECFF2C1A5FB300CA6B49 /* TranslatePresenter.swift */,
+				3DFBED012C1A5FC200CA6B49 /* TranslateRouter.swift */,
+			);
+			path = Translate;
+			sourceTree = "<group>";
+		};
+		3DFBED032C1A797700CA6B49 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3DFBED062C1A79B700CA6B49 /* FavoriteWordCell.swift */,
+				3DFBED072C1A79B700CA6B49 /* FavoriteWordCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -533,6 +596,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DA2F8CA2C15EC29000A8437 /* WordTypeCell.xib in Resources */,
+				3DFBED082C1A79B700CA6B49 /* FavoriteWordCell.xib in Resources */,
 				3D6AFAF52C11235100AFFDB1 /* Assets.xcassets in Resources */,
 				3D3C97722C18CE050028DB55 /* QuestionCell.xib in Resources */,
 				3D6AFAF82C11235100AFFDB1 /* Base in Resources */,
@@ -540,8 +604,10 @@
 				3D7154272C189D7D001DAE41 /* QuizViewController.xib in Resources */,
 				3DECF8F12C16591200A97462 /* SynonymCell.xib in Resources */,
 				3DE12FB52C145A2600FF2926 /* RecentSearchCell.xib in Resources */,
+				3DFBECFB2C1A5F5500CA6B49 /* TranslateViewController.xib in Resources */,
 				3D7154312C189DD4001DAE41 /* ResultViewController.xib in Resources */,
 				3D6AFB3D2C1137B500AFFDB1 /* HomeViewController.xib in Resources */,
+				3DFBECEF2C1A59F200CA6B49 /* FavoriteViewController.xib in Resources */,
 				3D71541D2C189D0F001DAE41 /* EntryViewController.xib in Resources */,
 				3D6AFAF02C11235000AFFDB1 /* Base in Resources */,
 				3D6AFB322C112D0600AFFDB1 /* SplashViewController.xib in Resources */,
@@ -569,19 +635,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DFBECF22C1A5A5500CA6B49 /* FavoriteInteractor.swift in Sources */,
 				3D6AFB242C1126F500AFFDB1 /* Reachability.swift in Sources */,
 				3D6AFB462C11426300AFFDB1 /* WordResponse.swift in Sources */,
 				3DE12FB72C145C9600FF2926 /* WordRepository.swift in Sources */,
 				3DC476FB2C120FD4005DACA8 /* CustomTabBar.swift in Sources */,
+				3DFBECF72C1A5B5C00CA6B49 /* FavoriteRouter.swift in Sources */,
 				3D21FE2C2C19AFA000648B7E /* UIAlertController.swift in Sources */,
 				3D71542D2C189DA3001DAE41 /* QuizRouter.swift in Sources */,
 				3D7154212C189D41001DAE41 /* EntryPresenter.swift in Sources */,
 				3D6AFB222C1126D900AFFDB1 /* NetworkManager.swift in Sources */,
 				3DE12FBC2C14AC5F00FF2926 /* UITableView.swift in Sources */,
 				3D6AFB3F2C11383500AFFDB1 /* HomeInteractor.swift in Sources */,
+				3DFBECF02C1A59F200CA6B49 /* FavoriteViewController.swift in Sources */,
 				3D6AFAF32C11235000AFFDB1 /* Dictionary.xcdatamodeld in Sources */,
+				3DFBECEB2C1A06C000CA6B49 /* TranslateResponse.swift in Sources */,
 				3DA2F8CB2C15EC29000A8437 /* WordTypeCell.swift in Sources */,
 				3D71541C2C189D0F001DAE41 /* EntryViewController.swift in Sources */,
+				3DFBECFC2C1A5F5500CA6B49 /* TranslateViewController.swift in Sources */,
 				3DF099F12C13AC0D00044B20 /* DetailViewController.swift in Sources */,
 				3D6AFB3C2C1137B500AFFDB1 /* HomeViewController.swift in Sources */,
 				3D3C97742C18E7CB0028DB55 /* QuizMockData.swift in Sources */,
@@ -599,15 +670,20 @@
 				3DE12FB42C145A2600FF2926 /* RecentSearchCell.swift in Sources */,
 				3DF099F62C13AD7A00044B20 /* DetailPresenter.swift in Sources */,
 				3D3C97712C18CE050028DB55 /* QuestionCell.swift in Sources */,
+				3DFBED022C1A5FC200CA6B49 /* TranslateRouter.swift in Sources */,
 				3D6AFB482C1142CC00AFFDB1 /* ServiceManager.swift in Sources */,
 				3D6AFB382C112DA500AFFDB1 /* SplashRouter.swift in Sources */,
 				3D71542B2C189D9A001DAE41 /* QuizPresenter.swift in Sources */,
+				3DFBECFE2C1A5F9C00CA6B49 /* TranslateInteractor.swift in Sources */,
 				3D6AFB202C1126C600AFFDB1 /* API.swift in Sources */,
 				3DECF8F42C16646F00A97462 /* Synonym.swift in Sources */,
+				3DFBED002C1A5FB300CA6B49 /* TranslatePresenter.swift in Sources */,
 				3DF099F42C13AD6300044B20 /* DetailInteractor.swift in Sources */,
 				3D6AFB312C112D0600AFFDB1 /* SplashViewController.swift in Sources */,
+				3DFBED092C1A79B700CA6B49 /* FavoriteWordCell.swift in Sources */,
 				3D6AFB362C112D9000AFFDB1 /* SplashPresenter.swift in Sources */,
 				3D7154232C189D53001DAE41 /* EntryRouter.swift in Sources */,
+				3DFBECF52C1A5AE700CA6B49 /* FavoritePresenter.swift in Sources */,
 				3D7154302C189DD4001DAE41 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

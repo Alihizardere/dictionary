@@ -60,12 +60,15 @@ final class DetailViewController: UIViewController {
     presenter.toggleSection(section: "Adjective")
   }
 
-  @IBAction func cancelButtonTapped(_ sender: Any) {
+  @IBAction func cancelButtonTapped(_ sender: UIButton) {
     presenter.cancelButtonTapped()
     cancelButton.isHidden = true
     selectedSectionButton.isHidden = true
   }
-
+  @IBAction func favoriteButtonTapped(_ sender: UIButton) {
+    presenter.favoriteButton()
+  }
+  
   @IBAction func audioButtonTapped(_ sender: Any) {
     if let word = selectedWord {
       presenter.playAudio(word: word)
@@ -74,6 +77,12 @@ final class DetailViewController: UIViewController {
 
   private func toggleSection(section: String) {
     presenter.toggleSection(section: section)
+  }
+
+  private func setupButton(_ button: UIButton) {
+    button.layer.borderWidth = 2
+    button.layer.borderColor = UIColor.lightGray.cgColor
+    button.layer.cornerRadius = nounButton.frame.height / 2
   }
 }
 
@@ -86,21 +95,11 @@ extension DetailViewController: DetailViewControllerProtocol {
     tableView.register(UINib(nibName: WordTypeCell.identifier, bundle: nil), forCellReuseIdentifier: WordTypeCell.identifier)
     tableView.register(UINib(nibName: SynonymCell.identifier, bundle: nil), forCellReuseIdentifier: SynonymCell.identifier)
 
-    nounButton.layer.borderWidth = 2
-    nounButton.layer.borderColor = UIColor.lightGray.cgColor
-    nounButton.layer.cornerRadius = nounButton.frame.height / 2
-
-    verbButton.layer.borderWidth = 2
-    verbButton.layer.borderColor = UIColor.lightGray.cgColor
-    verbButton.layer.cornerRadius = verbButton.frame.height / 2
-
-    adjectiveButton.layer.borderWidth = 2
-    adjectiveButton.layer.borderColor = UIColor.lightGray.cgColor
-    adjectiveButton.layer.cornerRadius = adjectiveButton.frame.height / 2
-
-    cancelButton.layer.borderWidth = 2
+    setupButton(nounButton)
+    setupButton(verbButton)
+    setupButton(adjectiveButton)
+    setupButton(cancelButton)
     cancelButton.layer.borderColor = UIColor.orange.cgColor
-    cancelButton.layer.cornerRadius = adjectiveButton.frame.height / 2
   }
   
   func reloadData() {

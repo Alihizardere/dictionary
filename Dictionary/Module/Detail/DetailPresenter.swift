@@ -21,6 +21,7 @@ protocol DetailPresenterProtocol {
   func fetchSynonymDetail(word: String)
   func playAudio(word: [WordResponse])
   func updateAudioButtonVisibility()
+  func favoriteButton()
 }
 
 final class DetailPresenter {
@@ -118,6 +119,12 @@ extension DetailPresenter: DetailPresenterProtocol {
     view.resetButtonVisibility()
   }
 
+  func favoriteButton() {
+    if let word = wordResults.first?.word {
+      interactor.saveFavoriteWord(word: word)
+    }
+  }
+
   func playAudio(word: [WordResponse]) {
     for response in word {
       if let phonetics = response.phonetics {
@@ -137,7 +144,7 @@ extension DetailPresenter: DetailPresenterProtocol {
     for response in wordResults {
       if let phonetics = response.phonetics {
         for phonetic in phonetics {
-          if let audio = phonetic.audio {
+          if let _ = phonetic.audio {
             audioAvailable = true
             break
           }

@@ -45,6 +45,5 @@ extension HomeInteractor: HomeInteractorProtocol {
 
   func deleteWord(indexPath: IndexPath) {
     wordRepository.deleteWord(indexPath: indexPath)
-    fetchSavedWords()
   }
 }

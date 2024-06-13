@@ -11,7 +11,6 @@ protocol HomePresenterProtocol {
   func viewDidLoad()
   func viewWillAppear()
   func wordSearched(word: String)
-  func fetchSavedWords()
   func numberOfItems() -> Int
   func didSelectRowAt(_ indexPath: IndexPath)
   func word(indexPath: IndexPath) -> String?
@@ -51,10 +50,6 @@ extension HomePresenter: HomePresenterProtocol {
     fetch(word: word)
   }
 
-  func fetchSavedWords() {
-    interactor.fetchSavedWords()
-  }
-
   func numberOfItems() -> Int {
     if words.count <= 5 {
      return  words.count
@@ -80,6 +75,10 @@ extension HomePresenter: HomePresenterProtocol {
   private func fetch(word: String) {
     interactor.fetchWord(word: word)
   }
+
+  private  func fetchSavedWords() {
+     interactor.fetchSavedWords()
+   }
 }
 
 extension HomePresenter: HomeInteractorOutputProtocol {
