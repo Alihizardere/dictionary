@@ -21,7 +21,7 @@ final class FavoritePresenter {
   weak var view: FavoriteViewControllerProtocol!
   let interactor: FavoriteInteractorProtocol
   let router: FavoriteRouter
-  private var favoriteWords = [String]()
+  var favoriteWords = [String]()
 
   init(
     view: FavoriteViewControllerProtocol!,

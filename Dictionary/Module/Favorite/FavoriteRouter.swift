@@ -6,6 +6,9 @@
 //
 
 import Foundation
+protocol FavoriteRouterProtocol {
+
+}
 
 final class FavoriteRouter {
 
@@ -22,4 +25,8 @@ final class FavoriteRouter {
     router.viewController = view
     return view
   }
+}
+
+extension FavoriteRouter: FavoriteRouterProtocol {
+
 }
