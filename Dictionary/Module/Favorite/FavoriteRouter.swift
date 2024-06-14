@@ -6,8 +6,8 @@
 //
 
 import Foundation
-protocol FavoriteRouterProtocol {
 
+protocol FavoriteRouterProtocol {
 }
 
 final class FavoriteRouter {
@@ -28,5 +28,4 @@ final class FavoriteRouter {
 }
 
 extension FavoriteRouter: FavoriteRouterProtocol {
-
 }

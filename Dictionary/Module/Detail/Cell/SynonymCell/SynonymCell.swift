@@ -42,6 +42,7 @@ class SynonymCell: UITableViewCell {
     for synonym in topSynonyms {
       let button = UIButton(type: .system)
       button.setTitle(synonym.word, for: .normal)
+      button.tintColor = .main
       button.backgroundColor = .systemGray5
       button.layer.cornerRadius = 5
       button.addTarget(self, action: #selector(synonymButtonTapped), for: .touchUpInside)

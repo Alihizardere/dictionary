@@ -8,6 +8,7 @@
 import Foundation
 
 protocol ResultPresenterProtocol {
+  func viewDidload()
   func setScore(score: Int)
   func playAgain()
   func backToHome()
@@ -27,6 +28,11 @@ final class ResultPresenter {
 }
 
 extension ResultPresenter: ResultPresenterProtocol {
+  
+  func viewDidload() {
+    view.setupUI()
+  }
+  
   func setScore(score: Int) {
     if score <= 5 {
       view.configureData()

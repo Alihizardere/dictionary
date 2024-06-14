@@ -36,7 +36,7 @@ final class QuizViewController: UIViewController {
   @IBAction func exitButtonTapped(_ sender: UIButton) {
     UIAlertController.showAlert(
       on: self ,
-      title: "Exit Quiz",
+      title: "Exit",
       message: "Are you sure you want to quit the quiz?",
       primaryButtonTitle: "OK",
       primaryButtonStyle: .destructive,
@@ -47,7 +47,7 @@ final class QuizViewController: UIViewController {
   }
 }
 
-// MARK: - QuizViewControllerProtocol
+// MARK: - QuizViewControllerProtocols
 extension QuizViewController: QuizViewControllerProtocol {
 
   func setupUI() {
@@ -56,10 +56,12 @@ extension QuizViewController: QuizViewControllerProtocol {
 
     collectionView.delegate = self
     collectionView.dataSource = self
-    collectionView.register(UINib(nibName: QuestionCell.identifier, bundle: nil), forCellWithReuseIdentifier: QuestionCell.identifier)
+    collectionView.register(
+      UINib(nibName: QuestionCell.identifier, bundle: nil),
+      forCellWithReuseIdentifier: QuestionCell.identifier
+    )
 
     nextButton.layer.cornerRadius = nextButton.frame.height / 3
-    exitButton.layer.cornerRadius = exitButton.frame.height / 3
   }
 
   func reloadData() {

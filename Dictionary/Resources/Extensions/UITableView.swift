@@ -9,11 +9,18 @@ import UIKit
 
 extension UITableView {
   func setEmptyView(_ title: String, message: String) {
-    let emptyView = UIView(frame: CGRect(x: self.center.x, y: self.center.y, width: self.bounds.size.width, height: self.bounds.size.height))
+    let emptyView = UIView(
+      frame: CGRect(
+        x: self.center.x,
+        y: self.center.y,
+        width: self.bounds.size.width,
+        height: self.bounds.size.height
+      )
+    )
 
     let titleLabel = UILabel()
     titleLabel.translatesAutoresizingMaskIntoConstraints = false
-    titleLabel.textColor = .systemOrange
+    titleLabel.textColor = .main
     titleLabel.font = .systemFont(ofSize: 18, weight: .medium)
     titleLabel.text = title
     titleLabel.textAlignment = .center
@@ -32,9 +39,9 @@ extension UITableView {
 
     NSLayoutConstraint.activate([
       titleLabel.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor),
-      titleLabel.centerYAnchor.constraint(equalTo: emptyView.centerYAnchor),
+      titleLabel.topAnchor.constraint(equalTo: emptyView.topAnchor,  constant: emptyView.frame.height / 4),
 
-      messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
+      messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 12),
       messageLabel.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor),
     ])
 

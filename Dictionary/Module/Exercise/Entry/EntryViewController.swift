@@ -9,11 +9,15 @@ import UIKit
 
 final class EntryViewController: UIViewController {
 
+  @IBOutlet weak var playButton: UIButton!
+  @IBOutlet weak var topicButton: UIButton!
   var presenter: EntryPresenterProtocol!
-  
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    playButton.layer.cornerRadius = playButton.frame.height / 2
+    topicButton.layer.cornerRadius = topicButton.frame.height / 2
+  }
 
   @IBAction func playButtonTapped(_ sender: UIButton) {
     presenter.navigateQuiz()

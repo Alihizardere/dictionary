@@ -13,12 +13,14 @@ protocol QuestionCellDelegate: AnyObject {
 
 class QuestionCell: UICollectionViewCell {
 
+  // MARK: - Properties
   static let identifier = "QuestionCell"
   @IBOutlet weak var questionLabel: UILabel!
   @IBOutlet weak var optionAButton: UIButton!
   @IBOutlet weak var optionBButton: UIButton!
   @IBOutlet weak var optionCButton: UIButton!
   @IBOutlet weak var optionDButton: UIButton!
+  @IBOutlet weak var cardView: UIView!
   weak var delegate: QuestionCellDelegate?
   private var correctAnswer = ""
   private var isOptionSelected = false
@@ -27,10 +29,12 @@ class QuestionCell: UICollectionViewCell {
     super.awakeFromNib()
     setupUI()
   }
+
+  // MARK: - Functions && Actions
   private func setupUI(){
-    questionLabel.layer.cornerRadius = questionLabel.frame.height / 7
-    questionLabel.layer.borderWidth = 2
-    questionLabel.layer.borderColor = UIColor.button.cgColor
+    cardView.layer.cornerRadius = questionLabel.frame.height / 7
+    cardView.layer.borderWidth = 2
+    cardView.layer.borderColor = UIColor.main.cgColor
 
     setupButton(optionAButton)
     setupButton(optionBButton)
@@ -54,7 +58,7 @@ class QuestionCell: UICollectionViewCell {
   private func setupButton(_ button: UIButton) {
     button.layer.cornerRadius = button.frame.height / 2
     button.layer.borderWidth = 2
-    button.layer.borderColor = UIColor.lightGray.cgColor
+    button.layer.borderColor = UIColor.main.cgColor
     button.addTarget(self, action: #selector(optionButtonTapped), for: .touchUpInside)
   }
 
@@ -65,6 +69,18 @@ class QuestionCell: UICollectionViewCell {
     optionDButton.backgroundColor = .clear
   }
 
+  private func highlightCorrectAnswer() {
+    if optionAButton.title(for: .normal) == correctAnswer {
+      optionAButton.backgroundColor = .button
+    } else if optionBButton.title(for: .normal) == correctAnswer {
+      optionBButton.backgroundColor = .button
+    } else if optionCButton.title(for: .normal) == correctAnswer {
+      optionCButton.backgroundColor = .button
+    } else if optionDButton.title(for: .normal) == correctAnswer {
+      optionDButton.backgroundColor = .button
+    }
+  }
+
   @objc func optionButtonTapped(_ sender: UIButton) {
     guard !isOptionSelected else { return }
     isOptionSelected = true
@@ -73,23 +89,11 @@ class QuestionCell: UICollectionViewCell {
     let isCorrect = (selectedOption == correctAnswer)
 
     if isCorrect {
-      sender.backgroundColor = .green
+      sender.backgroundColor = .button
     } else {
-      sender.backgroundColor = .red
+      sender.backgroundColor = .systemGray3
       highlightCorrectAnswer()
     }
     delegate?.didSelectAnswer(isCorrect: isCorrect)
-  }
-
-  private func highlightCorrectAnswer() {
-    if optionAButton.title(for: .normal) == correctAnswer {
-      optionAButton.backgroundColor = .green
-    } else if optionBButton.title(for: .normal) == correctAnswer {
-      optionBButton.backgroundColor = .green
-    } else if optionCButton.title(for: .normal) == correctAnswer {
-      optionCButton.backgroundColor = .green
-    } else if optionDButton.title(for: .normal) == correctAnswer {
-      optionDButton.backgroundColor = .green
-    }
   }
 }

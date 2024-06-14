@@ -3,8 +3,8 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,12 +20,26 @@
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ig2-7X-AJX">
                         <rect key="frame" x="16" y="8" width="391" height="138"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNN-WB-ORz">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="s9i-Uz-JH3">
                                 <rect key="frame" x="0.0" y="0.0" width="391" height="20.333333333333332"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" systemColor="systemOrangeColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNN-WB-ORz">
+                                        <rect key="frame" x="0.0" y="0.0" width="25.333333333333332" height="20.333333333333332"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="27" id="Qmr-JY-hfJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="- Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbv-1U-OfE">
+                                        <rect key="frame" x="25.333333333333343" y="0.0" width="365.66666666666663" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                        <color key="textColor" name="Button Color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iua-4O-ht6">
                                 <rect key="frame" x="0.0" y="24.333333333333336" width="391" height="20.333333333333336"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -44,7 +58,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZt-SR-63d">
                                         <rect key="frame" x="9" y="0.0" width="4" height="89.333333333333329"/>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <color key="backgroundColor" name="Button Color"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="4" id="qrP-gf-uWc"/>
                                         </constraints>
@@ -72,14 +86,15 @@
                 <outlet property="contentLabel" destination="Iua-4O-ht6" id="1Wc-x9-Oqu"/>
                 <outlet property="exampleLabel" destination="SPq-VG-O2Y" id="mxS-6J-rzn"/>
                 <outlet property="exampleView" destination="NZt-SR-63d" id="CZR-DH-5OO"/>
-                <outlet property="sectionTitleLabel" destination="dNN-WB-ORz" id="eo5-Ke-wzC"/>
+                <outlet property="sectionNumberLabel" destination="dNN-WB-ORz" id="uPR-aq-3Ol"/>
+                <outlet property="sectionTitleLabel" destination="bbv-1U-OfE" id="gF3-lt-REW"/>
             </connections>
             <point key="canvasLocation" x="-289.3129770992366" y="35.211267605633807"/>
         </tableViewCell>
     </objects>
     <resources>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <namedColor name="Button Color">
+            <color red="0.28117015960000002" green="0.64476114510000004" blue="0.86491245029999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

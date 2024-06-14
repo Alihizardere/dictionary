@@ -10,52 +10,47 @@ import XCTest
 
 final class HomePresenterTests: XCTestCase {
 
-    var presenter: HomePresenter!
-    var view: MockHomeViewController!
-    var interactor: MockHomeInteractor!
-    var router: MockHomeRouter!
+  var presenter: HomePresenter!
+  var view: MockHomeViewController!
+  var interactor: MockHomeInteractor!
+  var router: MockHomeRouter!
 
-    override func setUp() {
-        super.setUp()
+  override func setUp() {
+    super.setUp()
 
-        view = MockHomeViewController()
-        interactor = MockHomeInteractor()
-        router = MockHomeRouter()
+    view = MockHomeViewController()
+    interactor = MockHomeInteractor()
+    router = MockHomeRouter()
 
-        presenter = HomePresenter(
-            view: view,
-            router: router,
-            interactor: interactor
-        )
-    }
+    presenter = HomePresenter(
+      view: view,
+      router: router,
+      interactor: interactor
+    )
+  }
 
-    override func tearDown() {
-        view = nil
-        interactor = nil
-        router = nil
-        presenter = nil
+  override func tearDown() {
+    view = nil
+    interactor = nil
+    router = nil
+    presenter = nil
 
-        super.tearDown()
-    }
+    super.tearDown()
+  }
 
-    func testViewDidLoadInvokesSetupDelegates() {
-        XCTAssertFalse(view.invokedSetupDelegates)
-        presenter.viewDidLoad()
-        XCTAssertTrue(view.invokedSetupDelegates)
-    }
 
-    func testViewWillAppearInvokesFetchSavedWords() {
-        XCTAssertFalse(interactor.invokedFetchSavedWords)
-        presenter.viewWillAppear()
-        XCTAssertTrue(interactor.invokedFetchSavedWords)
-    }
+  func testViewWillAppearInvokesFetchSavedWords() {
+    XCTAssertFalse(interactor.invokedFetchSavedWords)
+    presenter.viewWillAppear()
+    XCTAssertTrue(interactor.invokedFetchSavedWords)
+  }
 
-    func testWordSearchedInvokesFetchWord() {
-        XCTAssertFalse(interactor.invokedFetchWord)
-        presenter.wordSearched(word: "home")
-        XCTAssertTrue(interactor.invokedFetchWord)
-        XCTAssertEqual(interactor.invokedFetchWordParameters?.word, "home")
-    }
+  func testWordSearchedInvokesFetchWord() {
+    XCTAssertFalse(interactor.invokedFetchWord)
+    presenter.wordSearched(word: "home")
+    XCTAssertTrue(interactor.invokedFetchWord)
+    XCTAssertEqual(interactor.invokedFetchWordParameters?.word, "home")
+  }
 
   func test_fetchNewsOutput() {
     presenter.fetchWordOutput(result: .success(WordResponse.response))

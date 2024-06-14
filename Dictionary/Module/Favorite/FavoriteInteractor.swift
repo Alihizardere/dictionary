@@ -15,7 +15,7 @@ protocol FavoriteInteractorProtocol {
 }
 
 protocol FavoriteInteractorOutputProtocol {
-  func fetchSavedFavoriteWords(words: [String])
+  func fetchSavedFavoriteWordsOutput(words: [String])
 }
 
 final class FavoriteInteractor {
@@ -26,7 +26,7 @@ extension FavoriteInteractor: FavoriteInteractorProtocol {
   
   func fetchSavedFavoriteWords() {
     let words =  wordRepository.fetchFavoriteWords()
-    self.output?.fetchSavedFavoriteWords(words: words ?? [])
+    self.output?.fetchSavedFavoriteWordsOutput(words: words ?? [])
   }
 
   func deleteWord(at indexPath: IndexPath) {

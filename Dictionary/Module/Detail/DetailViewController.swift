@@ -29,6 +29,7 @@ final class DetailViewController: UIViewController {
   @IBOutlet weak var verbButton: UIButton!
   @IBOutlet weak var adjectiveButton: UIButton!
   @IBOutlet weak var cancelButton: UIButton!
+  @IBOutlet weak var favoriteButton: UIButton!
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var audioButton: UIButton!
   var presenter: DetailPresenterProtocol!
@@ -44,7 +45,6 @@ final class DetailViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     presenter.viewDidLoad()
-    navigationController?.navigationBar.isHidden = false
   }
   
 // MARK: - Actions && Functions
@@ -75,6 +75,10 @@ final class DetailViewController: UIViewController {
     }
   }
 
+  @IBAction func backButtonTapped(_ sender: Any) {
+    navigationController?.popViewController(animated: true)
+  }
+  
   private func toggleSection(section: String) {
     presenter.toggleSection(section: section)
   }
@@ -82,24 +86,30 @@ final class DetailViewController: UIViewController {
   private func setupButton(_ button: UIButton) {
     button.layer.borderWidth = 2
     button.layer.borderColor = UIColor.lightGray.cgColor
-    button.layer.cornerRadius = nounButton.frame.height / 2
+    button.layer.cornerRadius = button.frame.height / 2
   }
 }
 
-// MARK: - DetailViewControllerProtocol
+// MARK: - DetailViewControllerProtocols
 extension DetailViewController: DetailViewControllerProtocol {
 
   func setupUI() {
     tableView.delegate = self
     tableView.dataSource = self
-    tableView.register(UINib(nibName: WordTypeCell.identifier, bundle: nil), forCellReuseIdentifier: WordTypeCell.identifier)
-    tableView.register(UINib(nibName: SynonymCell.identifier, bundle: nil), forCellReuseIdentifier: SynonymCell.identifier)
+    tableView.register(
+      UINib(nibName: WordTypeCell.identifier, bundle: nil),
+      forCellReuseIdentifier: WordTypeCell.identifier
+    )
+    tableView.register(
+      UINib(nibName: SynonymCell.identifier, bundle: nil),
+      forCellReuseIdentifier: SynonymCell.identifier
+    )
 
     setupButton(nounButton)
     setupButton(verbButton)
     setupButton(adjectiveButton)
     setupButton(cancelButton)
-    cancelButton.layer.borderColor = UIColor.orange.cgColor
+    cancelButton.layer.borderColor = UIColor.button.cgColor
   }
   
   func reloadData() {
@@ -109,7 +119,7 @@ extension DetailViewController: DetailViewControllerProtocol {
   }
 
   func configureData(result: [WordResponse]) {
-    titleLabel.text = result.first?.word
+    titleLabel.text = result.first?.word?.capitalized
     secondaryTitle.text = result.first?.phonetic
     selectedWord = result
     presenter.updateAudioButtonVisibility()
@@ -119,7 +129,7 @@ extension DetailViewController: DetailViewControllerProtocol {
     cancelButton.isHidden = false
     selectedSectionButton.layer.borderWidth = 2
     selectedSectionButton.layer.cornerRadius = selectedSectionButton.frame.height / 2
-    selectedSectionButton.layer.borderColor = UIColor.orange.cgColor
+    selectedSectionButton.layer.borderColor = UIColor.button.cgColor
   }
 
   func setSectionButtonTitle(title:String?) {
@@ -186,7 +196,7 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
     } else {
       let cell = tableView.dequeueReusableCell(withIdentifier: WordTypeCell.identifier, for: indexPath) as! WordTypeCell
       if let data = presenter.wordTypeData(indexPath: indexPath) {
-        cell.configure(sectionKey: data.sectionKey, definition: data.definition)
+        cell.configure(sectionKey: data.sectionKey, definition: data.definition, indexPath: indexPath.row)
       }
       return cell
     }

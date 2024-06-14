@@ -32,7 +32,7 @@
                         <constraint firstAttribute="height" constant="30" id="0FV-f7-00M"/>
                         <constraint firstAttribute="width" constant="30" id="QVQ-n5-PD2"/>
                     </constraints>
-                    <color key="tintColor" name="Button Color"/>
+                    <color key="tintColor" name="Main Color"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -43,7 +43,7 @@
                     </connections>
                 </button>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="WSs-5d-pZu">
-                    <rect key="frame" x="0.0" y="105" width="393" height="630"/>
+                    <rect key="frame" x="0.0" y="105" width="393" height="614"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fAP-76-I4L">
                         <size key="itemSize" width="393" height="641"/>
@@ -53,8 +53,8 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCA-8D-WO3">
-                    <rect key="frame" x="16" y="751" width="361" height="51"/>
-                    <color key="backgroundColor" name="Button Color"/>
+                    <rect key="frame" x="16" y="735" width="361" height="51"/>
+                    <color key="backgroundColor" name="Main Color"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="Next">
@@ -66,14 +66,14 @@
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="WSs-5d-pZu" firstAttribute="top" secondItem="5QC-6A-mur" secondAttribute="bottom" constant="8" id="0rI-3M-7B5"/>
                 <constraint firstItem="jCA-8D-WO3" firstAttribute="top" secondItem="WSs-5d-pZu" secondAttribute="bottom" constant="16" id="9cF-gh-b9e"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WSs-5d-pZu" secondAttribute="trailing" id="FVL-Ve-PO5"/>
                 <constraint firstItem="5QC-6A-mur" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="H5x-NU-VH2"/>
                 <constraint firstItem="jCA-8D-WO3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Qc4-Sw-ySe"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="jCA-8D-WO3" secondAttribute="bottom" constant="16" id="RLl-UW-d5S"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="jCA-8D-WO3" secondAttribute="bottom" constant="32" id="RLl-UW-d5S"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5QC-6A-mur" secondAttribute="trailing" constant="16" id="Uol-rm-NRt"/>
                 <constraint firstAttribute="bottom" secondItem="SYR-aG-pgV" secondAttribute="bottom" id="eAt-aI-rfU"/>
                 <constraint firstItem="SYR-aG-pgV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eUI-mR-C6F"/>
@@ -87,13 +87,13 @@
         </view>
     </objects>
     <resources>
-        <image name="QuizBackground" width="1080" height="1920"/>
+        <image name="QuizBackground" width="1008" height="1600"/>
         <image name="multiply" catalog="system" width="128" height="111"/>
-        <namedColor name="Button Color">
-            <color red="0.0" green="0.66299998760223389" blue="0.81599998474121094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Main Color">
+            <color red="0.0" green="0.14100000262260437" blue="0.32499998807907104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

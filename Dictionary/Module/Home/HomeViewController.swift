@@ -8,6 +8,7 @@
 import UIKit
 
 protocol HomeViewControllerProtocol: AnyObject {
+  func setupUI()
   func setupDelegates()
   func reloadData()
 }
@@ -24,9 +25,6 @@ final class HomeViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     presenter.viewDidLoad()
-    let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-    tapGesture.cancelsTouchesInView = false
-    view.addGestureRecognizer(tapGesture)
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -43,7 +41,7 @@ final class HomeViewController: UIViewController {
     dismissKeyboard()
   }
 
-  @objc func dismissKeyboard() {
+  @objc private func dismissKeyboard() {
     view.endEditing(true)
   }
 
@@ -58,6 +56,17 @@ final class HomeViewController: UIViewController {
 
 // MARK: - HomeViewControllerProtocol
 extension HomeViewController: HomeViewControllerProtocol {
+
+  func setupUI() {
+    searchButton.layer.cornerRadius = searchButton.frame.height / 2
+    let tapGesture = UITapGestureRecognizer(
+      target: self,
+      action: #selector(dismissKeyboard)
+    )
+    tapGesture.cancelsTouchesInView = false
+    view.addGestureRecognizer(tapGesture)
+  }
+  
 
   func setupDelegates() {
     searchBar.delegate = self
@@ -106,14 +115,15 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-    let deleteAction = UIContextualAction(style: .normal, title: "Delete") { _, _, _ in
+    let deleteAction = UIContextualAction(style: .destructive, title: "") { _, _, _ in
       self.presenter.deleteWord(at: indexPath)
     }
+    deleteAction.image = UIImage(systemName: "trash.fill")
     return UISwipeActionsConfiguration(actions: [deleteAction])
   }
 }
 
-// MARK: - UISearchBarDelegate
+// MARK: - UISearchBarDelegates
 extension HomeViewController: UISearchBarDelegate {
 
   func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {

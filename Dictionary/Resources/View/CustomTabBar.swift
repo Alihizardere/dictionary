@@ -13,7 +13,7 @@ class CustomTabBar: UITabBarController {
   private lazy var homeVC: UINavigationController = {
     let vc = HomeRouter.createModule()
     let item = UITabBarItem(
-      title: "home",
+      title: "Home",
       image: UIImage(systemName: "house"),
       selectedImage: UIImage(systemName: "house.fill")
     )
@@ -37,9 +37,9 @@ class CustomTabBar: UITabBarController {
   private lazy var favoriteVC: UINavigationController = {
     let vc = FavoriteRouter.createModule()
     let item = UITabBarItem(
-      title: "Favorites",
-      image: UIImage(systemName: "star"),
-      selectedImage: UIImage(systemName: "star.fill")
+      title: "Saved",
+      image: UIImage(systemName: "bookmark"),
+      selectedImage: UIImage(systemName: "bookmark.fill")
     )
     vc.tabBarItem = item
     let navController = UINavigationController(rootViewController: vc)

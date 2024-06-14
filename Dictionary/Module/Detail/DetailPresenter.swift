@@ -46,7 +46,7 @@ final class DetailPresenter {
   }
 }
 
-// MARK: - DetailPresenterProtocol
+// MARK: - DetailPresenterProtocols
 extension DetailPresenter: DetailPresenterProtocol {
 
   func viewDidLoad() {
@@ -154,7 +154,6 @@ extension DetailPresenter: DetailPresenterProtocol {
     view.setAudioButton(hasAudio: audioAvailable)
   }
 
-
   private func fetchSynonymWords(word: String) {
     interactor.fetchSynonymWords(word: word)
   }
@@ -166,7 +165,7 @@ extension DetailPresenter: DetailPresenterProtocol {
 
 // MARK: - DetailInteractorOutputProtocol
 extension DetailPresenter: DetailInteractorOutputProtocol {
-  
+
   func fetchSynonymWordsOutput(result: SynonymWordResult) {
     switch result {
     case .success(let synonymWord):

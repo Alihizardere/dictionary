@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultViewController" customModule="Dictionary" customModuleProvider="target">
             <connections>
+                <outlet property="backToHomeButton" destination="uBl-fb-cG8" id="1zh-uG-78b"/>
+                <outlet property="playButton" destination="g1b-rW-4PM" id="utT-xG-xBI"/>
                 <outlet property="scoreDescription" destination="M4v-KX-PGu" id="dkU-Wv-c7P"/>
                 <outlet property="scoreImage" destination="LJS-7Z-XXP" id="5Ag-TD-Kvz"/>
                 <outlet property="scoreLabel" destination="2Ma-sY-HeG" id="ZVj-kZ-MNi"/>
@@ -48,7 +50,7 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ma-sY-HeG">
                             <rect key="frame" x="0.0" y="0.0" width="22.333333333333332" height="48"/>
                             <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                            <color key="textColor" systemColor="systemRedColor"/>
+                            <color key="textColor" name="Button Color"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRW-vF-rfg">
@@ -91,7 +93,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBl-fb-cG8">
                             <rect key="frame" x="0.0" y="59" width="180" height="50"/>
-                            <color key="backgroundColor" name="Background Color"/>
+                            <color key="backgroundColor" name="Main Color"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="180" id="gVs-zO-lZm"/>
                                 <constraint firstAttribute="height" constant="50" id="skl-DF-PbU"/>
@@ -134,13 +136,13 @@
             <color red="0.0" green="0.14100000262260437" blue="0.32499998807907104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Button Color">
-            <color red="0.0" green="0.66299998760223389" blue="0.81599998474121094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.27843137254901962" green="0.64313725490196083" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Main Color">
+            <color red="0.0706044803449557" green="0.20238603707425146" blue="0.32133966533389835" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

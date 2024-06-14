@@ -16,6 +16,7 @@ protocol TranslatePresenterProtocol {
 
 final class TranslatePresenter {
 
+  // MARK: - Properties
   weak var view: TranslateViewControllerProtocol!
   let interactor: TranslateInteractorProtocol
   let router: TranslateRouter
@@ -31,6 +32,7 @@ final class TranslatePresenter {
   }  
 }
 
+// MARK: - TranslatePresenterProtocols
 extension TranslatePresenter: TranslatePresenterProtocol {
   func viewDidLoad() {
     view.setupUI()
@@ -51,6 +53,7 @@ extension TranslatePresenter: TranslatePresenterProtocol {
 
 }
 
+// MARK: - TranslateInteractorOutputProtocol
 extension TranslatePresenter: TranslateInteractorOutputProtocol {
   func translateTextOutput(result: translateSourceResult) {
     switch result {

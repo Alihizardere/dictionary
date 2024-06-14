@@ -22,6 +22,7 @@ final class FavoriteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       presenter.viewDidLoad()
+      setAccessbilityIdentifiers()
     }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -37,6 +38,7 @@ extension FavoriteViewController: FavoriteViewControllerProtocol {
     tableView.delegate = self
     tableView.dataSource = self
     tableView.register(UINib(nibName: FavoriteWordCell.identifier, bundle: nil), forCellReuseIdentifier: FavoriteWordCell.identifier)
+    navigationController?.navigationBar.isHidden = true
   }
 
   func reloadData() {
@@ -87,3 +89,10 @@ extension FavoriteViewController: FavoriteWordCellDelegate {
       secondaryButtonTitle: "Cancel")
   }
 }
+
+extension FavoriteViewController {
+  func setAccessbilityIdentifiers() {
+    tableView.accessibilityIdentifier = "favoriteTableView"
+  }
+}
+

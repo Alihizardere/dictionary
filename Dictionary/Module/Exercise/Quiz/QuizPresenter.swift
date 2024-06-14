@@ -34,7 +34,7 @@ final class QuizPresenter {
   }
 }
 
-// MARK: - QuizPresenterProtocol
+// MARK: - QuizPresenterProtocols
 extension QuizPresenter: QuizPresenterProtocol {
 
   func viewDidLoad() {

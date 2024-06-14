@@ -108,6 +108,7 @@ extension TranslateViewController: TranslateViewControllerProtocol {
 
 }
 
+// MARK: - UITextFieldDelegates
 extension TranslateViewController: UITextFieldDelegate {
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     textField.resignFirstResponder()

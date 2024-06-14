@@ -66,8 +66,9 @@ extension FavoritePresenter: FavoritePresenterProtocol {
   }
 }
 
+// MARK: - FavoriteInteractorOutputProtocol
 extension FavoritePresenter: FavoriteInteractorOutputProtocol {
-  func fetchSavedFavoriteWords(words: [String]) {
+  func fetchSavedFavoriteWordsOutput(words: [String]) {
     DispatchQueue.main.async {
       self.favoriteWords = words
     }

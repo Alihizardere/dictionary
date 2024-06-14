@@ -18,10 +18,11 @@ protocol HomePresenterProtocol {
 }
 
 final class HomePresenter {
+
+  // MARK: - Properties
   weak var view: HomeViewControllerProtocol!
   let router: HomeRouterProtocol
   let interactor: HomeInteractorProtocol
-
   private var words = [String]()
 
   init(
@@ -35,10 +36,12 @@ final class HomePresenter {
   }
 }
 
+// MARK: - HomePresenterProtocols
 extension HomePresenter: HomePresenterProtocol {
 
   func viewDidLoad() {
     view.setupDelegates()
+    view.setupUI()
   }
 
   func viewWillAppear() {
@@ -81,6 +84,7 @@ extension HomePresenter: HomePresenterProtocol {
    }
 }
 
+// MARK: - HomeInteractorOutputProtocols
 extension HomePresenter: HomeInteractorOutputProtocol {
   
   func fetchWordOutput(result: WordSourceResult) {

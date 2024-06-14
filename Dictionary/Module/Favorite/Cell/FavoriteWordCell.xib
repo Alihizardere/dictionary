@@ -20,7 +20,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cnE-Qp-ZTO">
                         <rect key="frame" x="16" y="4" width="311" height="87"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="JtG-aE-VAo">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="JtG-aE-VAo">
                                 <rect key="frame" x="16" y="8" width="279" height="71"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagIcon" translatesAutoresizingMaskIntoConstraints="NO" id="r6n-82-hUI">
@@ -30,8 +30,8 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnW-B1-7u0">
-                                        <rect key="frame" x="76" y="0.0" width="127" height="71"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="70" y="0.0" width="139" height="71"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -41,7 +41,9 @@
                                             <constraint firstAttribute="width" constant="40" id="Zmv-dk-HOP"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="trash.fill" catalog="system"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="trash.fill" catalog="system">
+                                            <color key="baseForegroundColor" name="Main Color"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="deleteButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Hrz-7l-VhH"/>
                                         </connections>
@@ -68,6 +70,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="cardView" destination="cnE-Qp-ZTO" id="6CX-64-xRP"/>
+                <outlet property="deleteButton" destination="MfB-K8-8x6" id="Xnj-wc-xhA"/>
                 <outlet property="wordLabel" destination="nnW-B1-7u0" id="nnd-Ci-GdF"/>
             </connections>
             <point key="canvasLocation" x="11.450381679389313" y="6.6901408450704229"/>
@@ -76,6 +79,9 @@
     <resources>
         <image name="flagIcon" width="748" height="748"/>
         <image name="trash.fill" catalog="system" width="117" height="128"/>
+        <namedColor name="Main Color">
+            <color red="0.0" green="0.14100000262260437" blue="0.32499998807907104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

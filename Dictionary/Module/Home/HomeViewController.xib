@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="5YR-0N-wt6">
+                <searchBar contentMode="redraw" placeholder="Word search" translatesAutoresizingMaskIntoConstraints="NO" id="5YR-0N-wt6">
                     <rect key="frame" x="0.0" y="59" width="393" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="Vhh-jl-hh0"/>
@@ -32,24 +33,26 @@
                     </connections>
                 </searchBar>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQk-Fc-moh">
-                    <rect key="frame" x="16" y="759" width="361" height="51"/>
-                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    <rect key="frame" x="16" y="751" width="361" height="51"/>
+                    <color key="backgroundColor" name="Button Color"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Search"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Search">
+                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="19"/>
+                    </buttonConfiguration>
                     <connections>
                         <action selector="searchButtonTapped:" destination="-1" eventType="touchUpInside" id="9bo-mR-TZ4"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmL-9r-meJ">
-                    <rect key="frame" x="16" y="114.99999999999999" width="136.66666666666666" height="26.333333333333329"/>
+                    <rect key="frame" x="16" y="116.99999999999999" width="136.66666666666666" height="26.333333333333329"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
-                    <color key="textColor" systemColor="systemOrangeColor"/>
+                    <color key="textColor" name="Main Color"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eGT-b9-jL0">
-                    <rect key="frame" x="16" y="147.33333333333337" width="361" height="255.66666666666663"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eGT-b9-jL0">
+                    <rect key="frame" x="8" y="149.33333333333337" width="369" height="255.66666666666663"/>
+                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -62,10 +65,10 @@
                 <constraint firstItem="5YR-0N-wt6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Pop-cc-fur"/>
                 <constraint firstItem="eGT-b9-jL0" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.3" id="PwS-ax-3ij"/>
                 <constraint firstItem="hQk-Fc-moh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Se1-Vf-CBf"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hQk-Fc-moh" secondAttribute="bottom" constant="8" id="UEL-y6-Smp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hQk-Fc-moh" secondAttribute="bottom" constant="16" id="UEL-y6-Smp"/>
                 <constraint firstItem="eGT-b9-jL0" firstAttribute="top" secondItem="rmL-9r-meJ" secondAttribute="bottom" constant="6" id="eqt-ny-9tc"/>
-                <constraint firstItem="rmL-9r-meJ" firstAttribute="top" secondItem="5YR-0N-wt6" secondAttribute="bottom" constant="6" id="mmb-DR-Ig7"/>
-                <constraint firstItem="eGT-b9-jL0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="oOT-tl-fu3"/>
+                <constraint firstItem="rmL-9r-meJ" firstAttribute="top" secondItem="5YR-0N-wt6" secondAttribute="bottom" constant="8" id="mmb-DR-Ig7"/>
+                <constraint firstItem="eGT-b9-jL0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="oOT-tl-fu3"/>
                 <constraint firstItem="hQk-Fc-moh" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.06" id="qAv-zV-QO4"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5YR-0N-wt6" secondAttribute="trailing" id="tla-qh-IKQ"/>
             </constraints>
@@ -101,11 +104,14 @@
         </tabBarController>
     </objects>
     <resources>
+        <namedColor name="Button Color">
+            <color red="0.27843137254901962" green="0.64313725490196083" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Main Color">
+            <color red="0.0706044803449557" green="0.20238603707425146" blue="0.32133966533389835" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
