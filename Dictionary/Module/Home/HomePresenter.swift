@@ -92,8 +92,10 @@ extension HomePresenter: HomeInteractorOutputProtocol {
     case .success(let word):
       DispatchQueue.main.async {
         self.router.navigate(.detail(word: word))
+        self.view.setSearchBarText()
       }
     case .failure(let error):
+      view.showErrorAlert()
       print(error.localizedDescription)
     }
   }

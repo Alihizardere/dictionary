@@ -11,6 +11,8 @@ protocol HomeViewControllerProtocol: AnyObject {
   func setupUI()
   func setupDelegates()
   func reloadData()
+  func showErrorAlert()
+  func setSearchBarText()
 }
 
 final class HomeViewController: UIViewController {
@@ -37,8 +39,6 @@ final class HomeViewController: UIViewController {
   @IBAction func searchButtonTapped(_ sender: Any) {
     guard let word = searchBar.text, !word.isEmpty else { return }
     presenter.wordSearched(word: word)
-    searchBar.text = ""
-    dismissKeyboard()
   }
 
   @objc private func dismissKeyboard() {
@@ -59,15 +59,8 @@ extension HomeViewController: HomeViewControllerProtocol {
 
   func setupUI() {
     searchButton.layer.cornerRadius = searchButton.frame.height / 2
-    let tapGesture = UITapGestureRecognizer(
-      target: self,
-      action: #selector(dismissKeyboard)
-    )
-    tapGesture.cancelsTouchesInView = false
-    view.addGestureRecognizer(tapGesture)
   }
   
-
   func setupDelegates() {
     searchBar.delegate = self
     tableView.delegate = self
@@ -90,6 +83,20 @@ extension HomeViewController: HomeViewControllerProtocol {
       }
       self.tableView.reloadData()
     }
+  }
+
+  func setSearchBarText() {
+    searchBar.text = ""
+    dismissKeyboard()
+  }
+
+  func showErrorAlert() {
+    UIAlertController.showAlert(
+      on: self ,
+      title: "Word Not Found",
+      message: "Sorry, the word you are looking for could not be found. Please try another word.",
+      primaryButtonTitle: "OK",
+      primaryButtonStyle: .destructive)
   }
 }
 
@@ -132,5 +139,10 @@ extension HomeViewController: UISearchBarDelegate {
 
   func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
     searchButtonForKeyboard(show: false)
+  }
+
+  func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    guard let word = searchBar.text, !word.isEmpty else { return }
+    presenter.wordSearched(word: word)
   }
 }

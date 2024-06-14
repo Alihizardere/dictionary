@@ -9,7 +9,7 @@ import UIKit
 
 protocol DetailViewControllerProtocol: AnyObject {
   func setSectionButtonTitle(title:String?)
-  func setupSectionButtonDisplay()
+  func setupSectionButtonShow()
   func hideButton(for section: String)
   func showButton(for section: String)
   func resetButtonVisibility()
@@ -125,7 +125,7 @@ extension DetailViewController: DetailViewControllerProtocol {
     presenter.updateAudioButtonVisibility()
   }
 
-  func setupSectionButtonDisplay() {
+  func setupSectionButtonShow() {
     cancelButton.isHidden = false
     selectedSectionButton.layer.borderWidth = 2
     selectedSectionButton.layer.cornerRadius = selectedSectionButton.frame.height / 2

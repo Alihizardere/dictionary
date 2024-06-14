@@ -71,13 +71,13 @@ class QuestionCell: UICollectionViewCell {
 
   private func highlightCorrectAnswer() {
     if optionAButton.title(for: .normal) == correctAnswer {
-      optionAButton.backgroundColor = .button
+      optionAButton.backgroundColor = .customGreen
     } else if optionBButton.title(for: .normal) == correctAnswer {
-      optionBButton.backgroundColor = .button
+      optionBButton.backgroundColor = .customGreen
     } else if optionCButton.title(for: .normal) == correctAnswer {
-      optionCButton.backgroundColor = .button
+      optionCButton.backgroundColor = .customGreen
     } else if optionDButton.title(for: .normal) == correctAnswer {
-      optionDButton.backgroundColor = .button
+      optionDButton.backgroundColor = .customGreen
     }
   }
 
@@ -89,7 +89,7 @@ class QuestionCell: UICollectionViewCell {
     let isCorrect = (selectedOption == correctAnswer)
 
     if isCorrect {
-      sender.backgroundColor = .button
+      sender.backgroundColor = .customGreen
     } else {
       sender.backgroundColor = .systemGray3
       highlightCorrectAnswer()

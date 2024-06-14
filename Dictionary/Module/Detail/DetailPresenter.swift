@@ -98,7 +98,7 @@ extension DetailPresenter: DetailPresenterProtocol {
     } else {
       sections.append(section)
     }
-    view.setupSectionButtonDisplay()
+    view.setupSectionButtonShow()
     view.reloadData()
     updateSelectedSectionButton(section: section)
   }
